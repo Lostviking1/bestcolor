@@ -72,10 +72,8 @@
     }
 
     .hero-media img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center top;
+      width: 75vw; /* Установлено изображение на всю ширину окна */
+      height: auto; /* Сохранение пропорций изображения */
     }
 
     .hero-overlay {
@@ -97,8 +95,8 @@
     }
 
     .brand img {
-      width: 48px;
-      height: 48px;
+      width: 80px;
+      height: 80px;
       border-radius: 50%;
       background: rgba(255,255,255,0.72);
       border: 1px solid rgba(255,255,255,0.7);
@@ -108,7 +106,7 @@
     .brand-text {
       color: #fff;
       text-transform: uppercase;
-      font-size: 12px;
+      font-size: 14x;
       line-height: 1.05;
       font-weight: 700;
       letter-spacing: 0.08em;
@@ -117,10 +115,10 @@
 
     .menu-btn {
       position: absolute;
-      top: 16px;
-      right: 16px;
-      width: 46px;
-      height: 46px;
+      top: 18px;
+      right: 18px;
+      width: 50px;
+      height: 50px;
       z-index: 2;
       border-radius: 50%;
       border: 1px solid rgba(255,255,255,0.75);
@@ -135,7 +133,7 @@
     .menu-btn span::before,
     .menu-btn span::after {
       display: block;
-      width: 16px;
+      width: 20px;
       height: 2px;
       border-radius: 2px;
       background: var(--accent-dark);
@@ -143,66 +141,67 @@
       position: relative;
     }
 
-    .menu-btn span::before { position: absolute; top: -5px; }
-    .menu-btn span::after { position: absolute; top: 5px; }
+    .menu-btn span::before { position: absolute; top: -6px; }
+    .menu-btn span::after { position: absolute; top: 6px; }
 
     .hero-copy {
       position: absolute;
-      left: 26px;
-      bottom: 38px;
+      left: 15px;
+      bottom: 15px;
       z-index: 2;
-      max-width: 220px;
+      max-width: 400px;
       color: #fff;
     }
 
     .hero-copy h1 {
       margin: 0;
       font-family: "Cormorant Garamond", serif;
-      font-size: 40px;
-      line-height: 0.92;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      text-shadow: 0 4px 18px rgba(0,0,0,0.18);
+      font-size: 26px; /* Уменьшен размер текста для предотвращения съезда */
+      line-height: 1;
+      font-weight: 400;
+      letter-spacing: -0.00em;
+      text-shadow: 0 4px 2px rgba(0,0,0,0.18);
     }
 
     .hero-copy .sub {
-      margin: 14px 0 0;
+      margin: 15px 0 0;
       font-size: 14px;
-      line-height: 1.55;
+      line-height: 1.1;
       color: rgba(255,255,255,0.92);
-      max-width: 180px;
-      text-shadow: 0 4px 18px rgba(0,0,0,0.18);
+      max-width: 500px;
+      text-shadow: 0 4px 18px rgba(0,0,6.18);
     }
 
     .hero-actions {
-      margin-top: 18px;
+      margin-top: 12px;
       display: grid;
-      gap: 10px;
-      max-width: 180px;
+      gap: 8px;
+      max-width: 300px;
     }
 
     .hero-btn {
       text-decoration: none;
-      min-height: 48px;
-      border-radius: 16px;
+      min-height: 35px;
+      border-radius: 8px;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 10px 14px;
+      padding: 10px 10px;
       font-size: 14px;
-      font-weight: 700;
-      line-height: 1.15;
+      font-weight: 200;
+      line-height: 1px;
       box-shadow: 0 10px 22px rgba(48,35,27,0.14);
     }
 
     .hero-btn.primary {
       color: #fff;
-      background: linear-gradient(135deg, #c79961, #ab7b48);
+      background: linear-gradient(135deg, #ddaf77, #613f1c);
+      border: 1px solid rgba(255,255,255,0.8);
     }
 
     .hero-btn.secondary {
-      color: #3a2c25;
-      background: rgba(255,255,255,0.92);
+      color: #fff;
+      background:linear-gradient(135deg, #ddaf77, #613f1c);
       border: 1px solid rgba(255,255,255,0.8);
     }
 
@@ -213,20 +212,22 @@
     .section:last-child { padding-bottom: 18px; }
 
     .eyebrow {
-      text-align: center;
+      text-align: center; /* Центрирование текста для всех заголовков с классом .eyebrow */
+      display: block; /* Убедиться, что элемент занимает всю ширину */
+      margin: 0 auto; /* Центрирование с учётом отступов */
       color: var(--accent);
       text-transform: uppercase;
-      letter-spacing: 0.12em;
       font-weight: 800;
-      font-size: 12px;
-      margin-bottom: 8px;
+      font-size: 20px;
+      margin-bottom: 12px;
     }
 
+      
     .title {
-      margin: 0;
+      margin: 10px;
       text-align: center;
       font-family: "Cormorant Garamond", serif;
-      font-size: 25px;
+      font-size: 15px;
       line-height: 1;
       font-weight: 700;
       color: #372b25;
@@ -237,7 +238,7 @@
     .desc {
       margin: 10px auto 0;
       max-width: 310px;
-      text-align: center;
+      text-align: left;
       color: #72665e;
       font-size: 14px;
       line-height: 1.5;
@@ -533,7 +534,7 @@
       <a href="#top">Главная</a>
       <a href="#about">О салоне</a>
       <a href="#works">Наши работы</a>
-      <a href="#contacts">Контакты</a>
+      <a href="#contacts">Запись</a>
       <a href="#reviews">Отзывы</a>
     </div>
   </div>
@@ -556,8 +557,8 @@
         </button>
 
         <div class="hero-copy">
-          <h1>Будь<br>уверенной<br><em style="font-style: italic; font-weight: 500;">и неотразимой</em></h1>
-          <div class="sub">Профессиональная колористика, уход и укладки для вашей неповторимой красоты</div>
+          <h1>Будь<br>уверенной<br>и неотразимой</h1>
+          <div class="sub">Профессиональная колористика<br>для вашей неповторимой красоты</div>
           <div class="hero-actions">
             <a class="hero-btn primary" href="#contacts">Записаться на окрашивание</a>
             <a class="hero-btn secondary" href="#works">Посмотреть работы</a>
@@ -566,9 +567,10 @@
       </section>
 
       <section class="section" id="about">
-        <div class="eyebrow">О салоне</div>
-        <h2 class="title">Территория красоты <span class="heart">♥</span></h2>
-        <p class="desc">Мы создаём цвет, который подчёркивает вашу индивидуальность. Работаем с любовью, качественными материалами и вниманием к каждой детали. Здесь вы почувствуете заботу и увидите результат, которым хочется любоваться.</p>
+          <div class="contacts-card">
+          <div class="eyebrow">О салоне
+          </div>
+          <p class="desc">Мы создаём цвет, который подчёркивает вашу индивидуальность. Работаем с любовью, качественными материалами и вниманием к каждой детали. Здесь вы почувствуете заботу и увидите результат, которым хочется любоваться.</p>
         <div class="features">
           <div class="feature">
             <div class="feature-icon">✦</div>
@@ -583,18 +585,14 @@
             <div class="feature-text">Индивидуальный<br>подход</div>
           </div>
         </div>
+        </div>
       </section>
 
       <section class="section" id="works">
-        <div class="works-head">
-          <div>
-            <div class="eyebrow">Наши работы</div>
-            <h2 class="title">Вдохновение в каждой детали</h2>
-          </div>
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="link-more">Смотреть все →</a>
-        </div>
-
-        <div class="gallery">
+        <div class="contacts-card">
+        <div class="eyebrow">Наши работы</div>    
+        <p class="desc">Вдохновение в каждой детали</p>
+        <div class="gallery" style="grid-template-columns: repeat(2, 1fr);">
           <div class="work-card">
             <img src="assets/img/work-1.png" alt="Сложное окрашивание">
             <p>Сложное окрашивание</p>
@@ -611,34 +609,37 @@
             <img src="assets/img/work-4.png" alt="Укладки">
             <p>Укладки</p>
           </div>
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="link-more">Смотреть все работы →</a>
         </div>
-      </section>
+    </div>    
+    </section>
+    
 
-      <section class="section contacts" id="contacts">
-        <div class="eyebrow">Запись и контакты</div>
-        <h2 class="title">Мы рядом с вами</h2>
+      <section class="section contacts" id="contacts">      
         <div class="contacts-card">
-          <div class="address">📍 Уфа, Интернациональная 159/1, офис 49</div>
-          <div class="map">
-            <iframe src="https://www.google.com/maps?q=%D0%A3%D1%84%D0%B0,%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F%20159/1,%20%D0%BE%D1%84%D0%B8%D1%81%2049&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Карта"></iframe>
-          </div>
+          <div class="eyebrow">Запись</div>
+          <p></p>
           <div class="contact-meta">
             <div class="meta-box"><strong>Время работы</strong>Пн–Вс: 09:00 – 21:00<br>Без выходных</div>
-            <div class="meta-box"><strong>Телефон</strong>+7 (987) 123-45-67<br>Звонок / WhatsApp</div>
+            <div class="meta-box"><strong>Телефон</strong>+7 (917) 419-35-65<br>Звонок / WhatsApp</div>
           </div>
           <div class="socials">
-            <a href="https://wa.me/79990000000" target="_blank" rel="noopener noreferrer" class="social wa">WhatsApp</a>
-            <a href="https://t.me/username" target="_blank" rel="noopener noreferrer" class="social tg">Telegram</a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social ig">Instagram</a>
+            <a href="https://wa.me/79174193565" target="_blank" rel="noopener noreferrer" class="social wa">WhatsApp</a>
+            <a href="https://t.me/makmarinaa" target="_blank" rel="noopener noreferrer" class="social tg">Telegram</a>
+            <a href="https://instagram.com/mak.marina" target="_blank" rel="noopener noreferrer" class="social ig">Instagram</a>
           </div>
-        </div>
+          <p></p>
+          <div class="address">Адрес: Уфа, Российская 159/1. Офис 49</div>
+          <div class="map">
+            <iframe src="https://www.google.com/maps?q=%D0%A3%D1%84%D0%B0,%20%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B9%D1%81%D0%BA%D0%B0%D1%8F%20159/1&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Карта"></iframe>
+          </div>
       </section>
 
       <section class="section reviews" id="reviews">
-        <div class="eyebrow">Отзывы</div>
-        <h2 class="title">Нам важно ваше мнение</h2>
+          <div class="contacts-card">
+          <div class="eyebrow">Отзывы</div>
         <p class="desc" style="max-width: 360px;">Ваш отзыв помогает нам становиться лучше и помогает другим найти своего мастера</p>
-        <div class="review-buttons">
+          <div class="review-buttons">
           <a class="review-btn" href="https://yandex.ru/maps" target="_blank" rel="noopener noreferrer">
             <div class="review-icon y">Я</div>
             <div class="review-copy"><strong>Яндекс Карты</strong><span>Оставить отзыв</span></div>
@@ -649,6 +650,7 @@
           </a>
         </div>
         <div class="thanks">Спасибо за вашу поддержку и доверие! ♡</div>
+        </div>
       </section>
 
       <footer class="footer">

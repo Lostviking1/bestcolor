@@ -20,18 +20,7 @@
       --line: #eadfd4;
       --accent: #b98957;
       --accent-dark: #916840;
-      --accent-light: #dbc3b2;
       --shadow: 0 14px 36px rgba(98, 72, 49, 0.08);
-      --radius-xl: 30px;
-      --radius-lg: 22px;
-      --radius-md: 18px;
-      --radius-sm: 14px;
-      --wa: #2ac660;
-      --tg: #2aabee;
-      --ig1: #f9a63a;
-      --ig2: #e53a7f;
-      --yandex: #fc4a2f;
-      --dgis: #54b948;
     }
 
     * { box-sizing: border-box; }
@@ -46,9 +35,9 @@
     img { display: block; max-width: 100%; }
 
     .shell {
-      width: min(100%, 430px);
+      width: min(100%, 500px);
       margin: 0 auto;
-      padding: 18px 10px 28px;
+      padding: 10px 10px 28px;
     }
 
     .phone {
@@ -59,46 +48,38 @@
       overflow: hidden;
     }
 
+    /* --- Hero Section --- */
     .hero {
       position: relative;
-      min-height: 442px;
+      min-height: 70vh;
       overflow: hidden;
       background: #d8c9bd;
     }
 
-    .hero-media {
-      position: absolute;
-      inset: 0;
-    }
-
-    .hero-media img {
-      width: 75vw; /* Установлено изображение на всю ширину окна */
-      height: auto; /* Сохранение пропорций изображения */
-    }
+    .hero-media { position: absolute; inset: 0; }
+    .hero-media img { width: 100%; height: 100%; object-fit: cover; }
 
     .hero-overlay {
       position: absolute;
       inset: 0;
-      background:
-        linear-gradient(90deg, rgba(41,31,25,0.42) 0%, rgba(41,31,25,0.16) 28%, rgba(41,31,25,0.00) 55%),
-        linear-gradient(180deg, rgba(247,243,238,0.06) 0%, rgba(247,243,238,0) 32%, rgba(41,31,25,0.18) 100%);
+      background: linear-gradient(180deg, rgba(41,31,25,0.1) 0%, rgba(41,31,25,0.7) 100%);
     }
 
     .brand {
       position: absolute;
-      top: 14px;
-      left: 16px;
+      top: 10px;
+      left: 10px;
       z-index: 2;
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
     }
 
     .brand img {
-      width: 80px;
-      height: 80px;
+      width: 90px;
+      height: 90px;
       border-radius: 50%;
-      background: rgba(255,255,255,0.72);
+      background: rgba(19, 13, 13, 0.72);
       border: 1px solid rgba(255,255,255,0.7);
       object-fit: cover;
     }
@@ -106,7 +87,7 @@
     .brand-text {
       color: #fff;
       text-transform: uppercase;
-      font-size: 14x;
+      font-size: 19px;
       line-height: 1.05;
       font-weight: 700;
       letter-spacing: 0.08em;
@@ -127,20 +108,14 @@
       place-items: center;
       box-shadow: 0 10px 18px rgba(64,46,32,0.08);
       cursor: pointer;
+      transition: transform 0.2s ease;
     }
-
-    .menu-btn span,
-    .menu-btn span::before,
-    .menu-btn span::after {
-      display: block;
-      width: 20px;
-      height: 2px;
-      border-radius: 2px;
-      background: var(--accent-dark);
-      content: "";
-      position: relative;
+    
+    .menu-btn:hover { transform: scale(1.05); }
+    .menu-btn span, .menu-btn span::before, .menu-btn span::after {
+      display: block; width: 20px; height: 2px; border-radius: 2px;
+      background: var(--accent-dark); content: ""; position: relative;
     }
-
     .menu-btn span::before { position: absolute; top: -6px; }
     .menu-btn span::after { position: absolute; top: 6px; }
 
@@ -156,375 +131,266 @@
     .hero-copy h1 {
       margin: 0;
       font-family: "Cormorant Garamond", serif;
-      font-size: 26px; /* Уменьшен размер текста для предотвращения съезда */
+      font-size: 36px;
+      font-weight: 700;
       line-height: 1;
-      font-weight: 400;
-      letter-spacing: -0.00em;
-      text-shadow: 0 4px 2px rgba(0,0,0,0.18);
+      text-shadow: 0 4px 21px rgba(0,0,0,0.4);
     }
 
     .hero-copy .sub {
       margin: 15px 0 0;
-      font-size: 14px;
-      line-height: 1.1;
-      color: rgba(255,255,255,0.92);
+      font-size: 18px;
+      line-height: 1.2;
+      color: rgba(255,255,255,0.95);
       max-width: 500px;
-      text-shadow: 0 4px 18px rgba(0,0,6.18);
+      text-shadow: 0 4px 18px rgba(0,0,0,0.5);
     }
 
     .hero-actions {
-      margin-top: 12px;
+      margin-top: 20px;
       display: grid;
-      gap: 8px;
+      gap: 10px;
       max-width: 300px;
     }
 
     .hero-btn {
       text-decoration: none;
-      min-height: 35px;
-      border-radius: 8px;
+      min-height: 48px;
+      border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 10px 10px;
-      font-size: 14px;
-      font-weight: 200;
-      line-height: 1px;
+      padding: 10px;
+      font-size: 16px;
+      font-weight: 600;
       box-shadow: 0 10px 22px rgba(48,35,27,0.14);
+      transition: transform 0.2s ease, opacity 0.2s ease;
     }
 
+    .hero-btn:hover { transform: translateY(-2px); opacity: 0.95; }
     .hero-btn.primary {
-      color: #fff;
-      background: linear-gradient(135deg, #ddaf77, #613f1c);
-      border: 1px solid rgba(255,255,255,0.8);
+      color: #fff; background: linear-gradient(135deg, #ddaf77, #613f1c);
+      border: 1px solid rgba(255,255,255,0.2);
     }
-
     .hero-btn.secondary {
-      color: #fff;
-      background:linear-gradient(135deg, #ddaf77, #613f1c);
-      border: 1px solid rgba(255,255,255,0.8);
+      color: #fff; background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.8);
     }
 
-    .section {
-      padding: 18px 18px 0;
-    }
-
-    .section:last-child { padding-bottom: 18px; }
+    /* --- Common Sections --- */
+    .section { padding: 20px 18px 0; }
+    .section:last-child { padding-bottom: 20px; }
 
     .eyebrow {
-      text-align: center; /* Центрирование текста для всех заголовков с классом .eyebrow */
-      display: block; /* Убедиться, что элемент занимает всю ширину */
-      margin: 0 auto; /* Центрирование с учётом отступов */
-      color: var(--accent);
-      text-transform: uppercase;
-      font-weight: 800;
-      font-size: 20px;
-      margin-bottom: 12px;
+      text-align: center; display: block; margin: 0 auto 12px auto;
+      color: var(--accent); text-transform: uppercase; font-weight: 800; font-size: 20px;
     }
-
-      
-    .title {
-      margin: 10px;
-      text-align: center;
-      font-family: "Cormorant Garamond", serif;
-      font-size: 15px;
-      line-height: 1;
-      font-weight: 700;
-      color: #372b25;
-    }
-
-    .title .heart { color: #d0a56e; }
-
     .desc {
-      margin: 10px auto 0;
-      max-width: 310px;
-      text-align: left;
-      color: #72665e;
-      font-size: 14px;
-      line-height: 1.5;
+      margin: 0 auto; max-width: 800px; text-align: center;
+      color: #72665e; font-size: 14px; line-height: 1.5;
+    }
+    .contacts-card {
+      background: #faf7f2; border: 1px solid var(--line);
+      border-radius: 20px; padding: 20px 16px; box-shadow: 0 8px 18px rgba(135, 104, 76, 0.05);
     }
 
-    .features {
-      margin-top: 16px;
+    /* --- ОБНОВЛЕНО: О салоне (4 плашки с фото) --- */
+    .about-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 12px;
+      margin-top: 16px;
     }
 
-    .feature {
-      background: #fbf7f2;
+    .about-card {
+      background: #fff;
       border: 1px solid var(--line);
-      border-radius: 18px;
-      padding: 14px 10px;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 16px rgba(135, 104, 76, 0.03);
+      transition: transform 0.3s ease;
+    }
+    
+    .about-card:hover { transform: translateY(-3px); }
+
+    .about-card img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .about-card-text {
+      padding: 10px;
       text-align: center;
-      box-shadow: 0 8px 18px rgba(135, 104, 76, 0.04);
     }
 
-    .feature-icon {
-      width: 44px;
-      height: 44px;
-      margin: 0 auto 10px;
-      border-radius: 50%;
-      border: 1.5px solid #d8bc9d;
-      color: var(--accent);
-      display: grid;
-      place-items: center;
-      font-size: 20px;
+    .about-card-text .title {
+      font-size: 13px;
       font-weight: 700;
-    }
-
-    .feature-text {
-      font-size: 12px;
-      font-weight: 700;
-      line-height: 1.3;
       color: #3c3029;
-    }
-
-    .works-head {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      gap: 10px;
-      margin-bottom: 14px;
-    }
-
-    .works-head .title,
-    .reviews .title,
-    .contacts .title {
-      text-align: left;
-    }
-
-    .works-head .eyebrow,
-    .reviews .eyebrow,
-    .contacts .eyebrow {
-      text-align: left;
       margin-bottom: 4px;
     }
 
-    .link-more {
-      text-decoration: none;
-      color: var(--accent);
-      font-size: 13px;
-      font-weight: 700;
-      white-space: nowrap;
-    }
-
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 10px;
-    }
-
-    .work-card img {
-      width: 100%;
-      aspect-ratio: 0.74;
-      object-fit: cover;
-      border-radius: 14px;
-      box-shadow: 0 8px 18px rgba(135, 104, 76, 0.06);
-    }
-
-    .work-card p {
-      margin: 8px 2px 0;
-      font-size: 12px;
-      color: #463934;
-      font-weight: 600;
-      text-align: center;
-      line-height: 1.25;
-    }
-
-    .contacts-card {
-      background: #faf7f2;
-      border: 1px solid var(--line);
-      border-radius: 20px;
-      padding: 16px;
-      box-shadow: 0 8px 18px rgba(135, 104, 76, 0.05);
-    }
-
-    .address {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      color: #594942;
-      font-weight: 700;
-      margin-bottom: 12px;
-      font-size: 14px;
-    }
-
-    .map {
-      border-radius: 16px;
-      overflow: hidden;
-      border: 1px solid #e7ddd3;
-      margin-bottom: 12px;
-      background: #eee5dc;
-    }
-
-    .map iframe {
-      width: 100%;
-      height: 170px;
-      border: 0;
-      display: block;
-    }
-
-    .contact-meta {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-      margin-bottom: 12px;
-      color: #5e5149;
-      font-size: 13px;
-      line-height: 1.4;
-    }
-
-    .meta-box {
-      background: #fff;
-      border: 1px solid #eee2d7;
-      border-radius: 14px;
-      padding: 10px 12px;
-    }
-
-    .meta-box strong {
-      display: block;
-      color: #3d3029;
-      font-size: 12px;
-      margin-bottom: 3px;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-
-    .socials {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
-    }
-
-    .social {
-      text-decoration: none;
-      min-height: 42px;
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      font-size: 13px;
-      font-weight: 700;
-      box-shadow: 0 8px 16px rgba(135, 104, 76, 0.08);
-    }
-
-    .social.wa { background: var(--wa); }
-    .social.tg { background: var(--tg); }
-    .social.ig { background: linear-gradient(135deg, var(--ig1), var(--ig2)); }
-
-    .review-buttons {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      margin-top: 14px;
-    }
-
-    .review-btn {
-      text-decoration: none;
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      padding: 14px 12px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      box-shadow: 0 8px 18px rgba(135, 104, 76, 0.05);
-    }
-
-    .review-icon {
-      width: 34px;
-      height: 34px;
-      border-radius: 12px;
-      display: grid;
-      place-items: center;
-      color: #fff;
-      font-weight: 800;
-      font-size: 14px;
-      flex-shrink: 0;
-    }
-
-    .review-icon.y { background: var(--yandex); }
-    .review-icon.g { background: var(--dgis); }
-
-    .review-copy {
-      min-width: 0;
-    }
-
-    .review-copy strong {
-      display: block;
-      color: #392d27;
-      font-size: 13px;
+    .about-card-text .subdesc {
+      font-size: 11px;
+      color: #8a7b71;
       line-height: 1.2;
     }
 
-    .review-copy span {
-      display: block;
-      color: #8a7b71;
-      font-size: 11px;
-      margin-top: 2px;
+    /* --- Услуги (Галерея) --- */
+    .gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 16px; }
+    .work-card { overflow: hidden; border-radius: 14px; cursor: pointer; }
+    .work-card img {
+      width: 100%; aspect-ratio: 0.8; object-fit: cover; border-radius: 14px;
+      box-shadow: 0 8px 18px rgba(135, 104, 76, 0.06); transition: transform 0.3s ease;
+    }
+    .work-card:hover img { transform: scale(1.05); }
+    .work-card p {
+      margin: 8px 2px 0; font-size: 13px; color: #463934; font-weight: 600; text-align: center;
     }
 
-    .thanks {
-      margin: 14px 0 0;
-      text-align: center;
-      color: #9a8d82;
-      font-size: 12px;
+    .link-more-wrapper { text-align: center; margin-top: 20px; }
+    .link-more {
+      text-decoration: none; color: var(--accent); font-size: 14px; font-weight: 700;
+      display: inline-block; padding: 8px 16px; border-radius: 20px;
+      background: #fbf7f2; border: 1px solid var(--line); transition: background 0.2s ease;
     }
+    .link-more:hover { background: #f1ebd8; }
+
+    /* --- ОБНОВЛЕНО: Отзывы клиентов (Карусель со стрелками) --- */
+    .slider-container {
+      position: relative;
+      margin-top: 16px;
+    }
+
+    .reviews-slider {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 12px;
+      padding: 10px 0;
+      scroll-behavior: smooth; /* Плавный скролл для стрелок */
+    }
+    
+    .reviews-slider::-webkit-scrollbar { display: none; }
+    
+    .review-item {
+      flex: 0 0 100%; /* Карточка занимает всю ширину контейнера */
+      scroll-snap-align: center;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 16px;
+      box-shadow: 0 6px 16px rgba(135, 104, 76, 0.04);
+    }
+
+    .stars { color: #f9a63a; font-size: 14px; margin-bottom: 8px; letter-spacing: 2px;}
+    .review-text { font-size: 13px; color: #5e5149; line-height: 1.4; font-style: italic; margin-bottom: 12px; min-height: 56px;}
+    .review-author { font-size: 12px; font-weight: 700; color: #3c3029; display: flex; align-items: center; gap: 8px;}
+    .review-author span { color: #a5988f; font-weight: 400; font-size: 11px;}
+
+    .slider-arrows {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .arrow-btn {
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      background: #fff;
+      border: 1px solid var(--line);
+      color: var(--accent-dark);
+      font-size: 18px;
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(135, 104, 76, 0.08);
+      transition: all 0.2s ease;
+    }
+
+    .arrow-btn:hover { background: var(--card); transform: scale(1.05); }
+
+    /* --- ЗАПИСЬ И СОЦСЕТИ --- */
+    .address {
+      display: flex; align-items: center; gap: 8px; color: #594942;
+      font-weight: 700; margin-bottom: 12px; font-size: 14px; text-align: center; justify-content: center;
+    }
+    .map { border-radius: 16px; overflow: hidden; border: 1px solid #e7ddd3; margin-bottom: 16px; background: #eee5dc; }
+    .contact-meta { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 16px 0; color: #5e5149; font-size: 13px; line-height: 1.4; }
+    .meta-box { background: #fff; border: 1px solid #eee2d7; border-radius: 14px; padding: 12px; text-align: center; }
+    .meta-box strong { display: block; color: #3d3029; font-size: 12px; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.05em; }
+    
+    /* ОБНОВЛЕНО: Белые кнопки соцсетей с иконками из папки */
+    .socials { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 20px; }
+    .social {
+      text-decoration: none; min-height: 44px; border-radius: 12px;
+      display: flex; align-items: center; justify-content: center; gap: 6px;
+      background: #fff; border: 1px solid var(--line);
+      color: #3c3029; font-size: 12px; font-weight: 700;
+      box-shadow: 0 4px 12px rgba(135, 104, 76, 0.04); transition: transform 0.2s ease;
+    }
+    .social:hover { transform: translateY(-2px); box-shadow: 0 8px 16px rgba(135, 104, 76, 0.08); }
+    .social img { width: 20px; height: 20px; object-fit: contain; }
+
+    /* --- ОСТАВИТЬ ОТЗЫВ --- */
+    .review-guide {
+      background: #fff; border: 1px solid #e8dec8; border-left: 4px solid var(--accent);
+      border-radius: 12px; padding: 14px; margin: 16px 0; text-align: left;
+    }
+    .review-guide strong { display: block; color: #3c3029; font-size: 13px; margin-bottom: 8px; }
+    .review-guide ul { margin: 0; padding-left: 18px; color: #72665e; font-size: 12px; line-height: 1.5; }
+    .review-guide li { margin-bottom: 4px; }
+
+    .review-buttons { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px; }
+    .review-btn {
+      text-decoration: none; background: #fff; border: 1px solid var(--line);
+      border-radius: 16px; padding: 12px; display: flex; align-items: center;
+      gap: 12px; box-shadow: 0 4px 12px rgba(135, 104, 76, 0.04); transition: transform 0.2s ease;
+    }
+    .review-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(135, 104, 76, 0.08); }
+    
+    /* Иконки карт из папки */
+    .review-icon-img { width: 34px; height: 34px; object-fit: contain; flex-shrink: 0; }
+    
+    .review-copy { min-width: 0; text-align: left;}
+    .review-copy strong { display: block; color: #392d27; font-size: 13px; line-height: 1.2; }
+    .review-copy span { display: block; color: #8a7b71; font-size: 11px; margin-top: 3px; }
+    .thanks { margin: 16px 0 0; text-align: center; color: #9a8d82; font-size: 13px; font-weight: 500; }
 
     .footer {
-      border-top: 1px solid #eee3d8;
-      margin-top: 18px;
-      padding: 12px 18px 16px;
-      display: flex;
-      justify-content: space-between;
-      gap: 10px;
-      color: #a09288;
-      font-size: 11px;
-      line-height: 1.35;
+      border-top: 1px solid #eee3d8; margin-top: 24px; padding: 16px 18px;
+      display: flex; justify-content: space-between; gap: 10px;
+      color: #a09288; font-size: 12px; line-height: 1.35;
     }
 
+    /* --- Mobile Menu --- */
     .mobile-menu {
-      position: fixed;
-      inset: 0;
-      background: rgba(36, 28, 24, 0.44);
-      display: none;
-      align-items: flex-start;
-      justify-content: center;
-      padding: 80px 18px 18px;
-      z-index: 30;
+      position: fixed; inset: 0; background: rgba(36, 28, 24, 0.5);
+      display: flex; align-items: flex-start; justify-content: center;
+      padding: 80px 18px 18px; z-index: 30; backdrop-filter: blur(4px);
+      opacity: 0; visibility: hidden; transition: opacity 0.3s ease, visibility 0.3s ease;
     }
-
-    .mobile-menu.open { display: flex; }
-
+    .mobile-menu.open { opacity: 1; visibility: visible; }
     .mobile-menu-card {
-      width: min(100%, 420px);
-      background: #fff;
-      border-radius: 24px;
-      border: 1px solid #efe2d7;
-      box-shadow: 0 20px 44px rgba(56, 41, 31, 0.18);
-      padding: 16px;
+      width: min(100%, 420px); background: #fff; border-radius: 24px;
+      border: 1px solid #efe2d7; box-shadow: 0 20px 44px rgba(56, 41, 31, 0.18);
+      padding: 16px; transform: translateY(-20px); transition: transform 0.3s ease;
     }
-
+    .mobile-menu.open .mobile-menu-card { transform: translateY(0); }
     .mobile-menu-card a {
-      display: block;
-      text-decoration: none;
-      color: #3d3029;
-      font-weight: 700;
-      padding: 14px 12px;
-      border-radius: 14px;
+      display: block; text-decoration: none; color: #3d3029; font-weight: 700;
+      padding: 14px 16px; border-radius: 14px; transition: background 0.2s ease; font-size: 16px;
     }
-
     .mobile-menu-card a:hover { background: #f8f2ec; }
 
     @media (max-width: 410px) {
-      .gallery { grid-template-columns: repeat(2, 1fr); }
-      .features { grid-template-columns: 1fr; }
       .socials, .review-buttons, .contact-meta { grid-template-columns: 1fr; }
-      .hero-copy h1 { font-size: 36px; }
+      .hero-copy h1 { font-size: 32px; }
       .hero-copy { left: 18px; right: 18px; bottom: 26px; }
-      .hero-actions { max-width: 190px; }
+      .hero-actions { max-width: 100%; }
     }
   </style>
 </head>
@@ -533,14 +399,17 @@
     <div class="mobile-menu-card">
       <a href="#top">Главная</a>
       <a href="#about">О салоне</a>
-      <a href="#works">Наши работы</a>
+      <a href="#works">Наши услуги</a>
+      <a href="#testimonials">Отзывы клиентов</a>
       <a href="#contacts">Запись</a>
-      <a href="#reviews">Отзывы</a>
+      <a href="#reviews">Оставить отзыв</a>
     </div>
   </div>
 
   <main class="shell">
     <div class="phone" id="top">
+      
+      <!-- HERO -->
       <section class="hero">
         <div class="hero-media">
           <img src="assets/img/hero.png" alt="Будь уверенной и неотразимой" />
@@ -566,104 +435,196 @@
         </div>
       </section>
 
+      <!-- О САЛОНЕ (Обновлено: 4 фото-плашки) -->
       <section class="section" id="about">
-          <div class="contacts-card">
-          <div class="eyebrow">О салоне
+        <div class="contacts-card">
+          <div class="eyebrow">О салоне</div>
+          <p class="desc">Здесь вы почувствуете заботу и увидите результат, которым хочется любоваться.</p>
+          
+          <div class="about-grid">
+            <div class="about-card">
+              <img src="assets/img/about-masters.png" alt="Мастера">
+              <div class="about-card-text">
+                <div class="title">Опытные мастера</div>
+                <div class="subdesc">Сложные техники</div>
+              </div>
+            </div>
+            
+            <div class="about-card">
+              <img src="assets/img/about-dyes.png" alt="Материалы">
+              <div class="about-card-text">
+                <div class="title">Премиум красители</div>
+                <div class="subdesc">Безопасность волос</div>
+              </div>
+            </div>
+            
+            <div class="about-card">
+              <img src="assets/img/about-equip.png" alt="Оборудование">
+              <div class="about-card-text">
+                <div class="title">Проф. оборудование</div>
+                <div class="subdesc">Современный подход</div>
+              </div>
+            </div>
+
+            <div class="about-card">
+              <img src="assets/img/about-service.png" alt="Сервис">
+              <div class="about-card-text">
+                <div class="title">Сервис и комфорт</div>
+                <div class="subdesc">Вкусный кофе и уют</div>
+              </div>
+            </div>
           </div>
-          <p class="desc">Мы создаём цвет, который подчёркивает вашу индивидуальность. Работаем с любовью, качественными материалами и вниманием к каждой детали. Здесь вы почувствуете заботу и увидите результат, которым хочется любоваться.</p>
-        <div class="features">
-          <div class="feature">
-            <div class="feature-icon">✦</div>
-            <div class="feature-text">Опытные<br>колористы</div>
-          </div>
-          <div class="feature">
-            <div class="feature-icon">◌</div>
-            <div class="feature-text">Премиальные<br>материалы</div>
-          </div>
-          <div class="feature">
-            <div class="feature-icon">♡</div>
-            <div class="feature-text">Индивидуальный<br>подход</div>
-          </div>
-        </div>
         </div>
       </section>
 
+      <!-- УСЛУГИ -->
       <section class="section" id="works">
         <div class="contacts-card">
-        <div class="eyebrow">Наши работы</div>    
-        <p class="desc">Вдохновение в каждой детали</p>
-        <div class="gallery" style="grid-template-columns: repeat(2, 1fr);">
-          <div class="work-card">
-            <img src="assets/img/work-1.png" alt="Сложное окрашивание">
-            <p>Сложное окрашивание</p>
+          <div class="eyebrow">Наши услуги</div>    
+          <p class="desc">Вдохновение в каждой детали</p>
+          <div class="gallery">
+            <div class="work-card">
+              <img src="assets/img/work-1.png" alt="Сложное окрашивание">
+              <p>Сложное окрашивание</p>
+            </div>
+            <div class="work-card">
+              <img src="assets/img/work-2.png" alt="Идеальный блонд">
+              <p>Идеальный блонд</p>
+            </div>
+            <div class="work-card">
+              <img src="assets/img/work-3.png" alt="Тонирование">
+              <p>Тонирование</p>
+            </div>
+            <div class="work-card">
+              <img src="assets/img/work-4.png" alt="Укладки">
+              <p>Укладки</p>
+            </div>
           </div>
-          <div class="work-card">
-            <img src="assets/img/work-2.png" alt="Идеальный блонд">
-            <p>Идеальный блонд</p>
+          <div class="link-more-wrapper">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="link-more">Смотреть все работы →</a>
           </div>
-          <div class="work-card">
-            <img src="assets/img/work-3.png" alt="Тонирование">
-            <p>Тонирование</p>
-          </div>
-          <div class="work-card">
-            <img src="assets/img/work-4.png" alt="Укладки">
-            <p>Укладки</p>
-          </div>
-        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="link-more">Смотреть все работы →</a>
-        </div>
-    </div>    
-    </section>
-    
+        </div>    
+      </section>
 
+      <!-- ОТЗЫВЫ КЛИЕНТОВ (Обновлено: Кнопки навигации) -->
+      <section class="section" id="testimonials">
+        <div class="contacts-card">
+          <div class="eyebrow">Говорят о нас</div>
+          <p class="desc">Спасибо, что доверяете нам свою красоту</p>
+          
+          <div class="slider-container">
+            <div class="reviews-slider" id="reviewsSlider">
+              <!-- Отзыв 1 -->
+              <div class="review-item">
+                <div class="stars">★★★★★</div>
+                <div class="review-text">«Делала сложное окрашивание, мастер просто супер! Волосы живые, цвет именно тот, который я хотела. Спасибо!»</div>
+                <div class="review-author">Елена С. <span>• 2ГИС</span></div>
+              </div>
+              <!-- Отзыв 2 -->
+              <div class="review-item">
+                <div class="stars">★★★★★</div>
+                <div class="review-text">«Очень уютный салон, приветливый персонал и вкусный кофе. Тотал блонд получился идеальным, без желтизны.»</div>
+                <div class="review-author">Алина М. <span>• Яндекс</span></div>
+              </div>
+              <!-- Отзыв 3 -->
+              <div class="review-item">
+                <div class="stars">★★★★★</div>
+                <div class="review-text">«Марина спасла мои волосы после неудачного окрашивания в другом месте. Теперь только к вам!»</div>
+                <div class="review-author">Кристина В. <span>• Instagram</span></div>
+              </div>
+              <!-- Отзыв 4 -->
+              <div class="review-item">
+                <div class="stars">★★★★★</div>
+                <div class="review-text">«Хожу сюда уже год. Идеальное тонирование и укладки, которые держатся несколько дней. Рекомендую!»</div>
+                <div class="review-author">Ольга <span>• Яндекс</span></div>
+              </div>
+            </div>
+            
+            <!-- Кнопки управления слайдером -->
+            <div class="slider-arrows">
+              <button class="arrow-btn" onclick="moveSlider(-1)">❮</button>
+              <button class="arrow-btn" onclick="moveSlider(1)">❯</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ЗАПИСЬ (Обновлено: иконки из папки) -->
       <section class="section contacts" id="contacts">      
         <div class="contacts-card">
           <div class="eyebrow">Запись</div>
-          <p></p>
           <div class="contact-meta">
             <div class="meta-box"><strong>Время работы</strong>Пн–Вс: 09:00 – 21:00<br>Без выходных</div>
             <div class="meta-box"><strong>Телефон</strong>+7 (917) 419-35-65<br>Звонок / WhatsApp</div>
           </div>
+          
           <div class="socials">
-            <a href="https://wa.me/79174193565" target="_blank" rel="noopener noreferrer" class="social wa">WhatsApp</a>
-            <a href="https://t.me/makmarinaa" target="_blank" rel="noopener noreferrer" class="social tg">Telegram</a>
-            <a href="https://instagram.com/mak.marina" target="_blank" rel="noopener noreferrer" class="social ig">Instagram</a>
+            <a href="https://wa.me/79174193565" target="_blank" rel="noopener noreferrer" class="social">
+              <img src="assets/img/icon-wa.png" alt="WhatsApp"> WhatsApp
+            </a>
+            <a href="https://t.me/makmarinaa" target="_blank" rel="noopener noreferrer" class="social">
+              <img src="assets/img/icon-tg.png" alt="Telegram"> Telegram
+            </a>
+            <a href="https://instagram.com/mak.marina" target="_blank" rel="noopener noreferrer" class="social">
+              <img src="assets/img/icon-ig.png" alt="Instagram"> Instagram
+            </a>
           </div>
-          <p></p>
-          <div class="address">Адрес: Уфа, Российская 159/1. Офис 49</div>
+
+          <div class="address">Уфа, Российская 159/1, офис 49</div>
+          
           <div class="map">
-            <iframe src="https://www.google.com/maps?q=%D0%A3%D1%84%D0%B0,%20%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B9%D1%81%D0%BA%D0%B0%D1%8F%20159/1&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Карта"></iframe>
+            <div style="position:relative;overflow:hidden;">
+              <a href="https://yandex.com/maps/org/territoriya_krasoty/125972859834/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Территория красоты</a>
+              <iframe src="https://yandex.com/map-widget/v1/?from=mapframe&ll=56.034220%2C54.771940&mode=search&oid=125972859834&ol=biz&z=18.8" width="100%" height="300" frameborder="0" allowfullscreen="true" style="position:relative; display:block;"></iframe>
+            </div>
           </div>
+        </div>
       </section>
 
+      <!-- ОСТАВИТЬ ОТЗЫВ (Обновлено: иконки карт из папки) -->
       <section class="section reviews" id="reviews">
-          <div class="contacts-card">
-          <div class="eyebrow">Отзывы</div>
-        <p class="desc" style="max-width: 360px;">Ваш отзыв помогает нам становиться лучше и помогает другим найти своего мастера</p>
+        <div class="contacts-card">
+          <div class="eyebrow">Оставить отзыв</div>
+          <p class="desc">Ваш отзыв помогает нам становиться лучше, а другим девушкам — найти своего мастера!</p>
+          
+          <div class="review-guide">
+            <strong>💡 Как написать классный отзыв?</strong>
+            <ul>
+              <li>Укажите имя мастера, который с вами работал</li>
+              <li>Напишите, какую услугу делали (например: тотал блонд)</li>
+              <li>Прикрепите фото ДО и ПОСЛЕ — это очень помогает!</li>
+            </ul>
+          </div>
+
           <div class="review-buttons">
-          <a class="review-btn" href="https://yandex.ru/maps" target="_blank" rel="noopener noreferrer">
-            <div class="review-icon y">Я</div>
-            <div class="review-copy"><strong>Яндекс Карты</strong><span>Оставить отзыв</span></div>
-          </a>
-          <a class="review-btn" href="https://2gis.ru" target="_blank" rel="noopener noreferrer">
-            <div class="review-icon g">2Г</div>
-            <div class="review-copy"><strong>2ГИС</strong><span>Оставить отзыв</span></div>
-          </a>
-        </div>
-        <div class="thanks">Спасибо за вашу поддержку и доверие! ♡</div>
+            <a class="review-btn" href="https://yandex.ru/maps-reviews-widget/125972859834?comments" target="_blank" rel="noopener noreferrer">
+              <img src="assets/img/icon-yandex.png" alt="Яндекс Карты" class="review-icon-img">
+              <div class="review-copy"><strong>Яндекс Карты</strong><span>Оставить отзыв</span></div>
+            </a>
+            
+            <a class="review-btn" href="https://2gis.ru" target="_blank" rel="noopener noreferrer">
+              <img src="assets/img/icon-2gis.png" alt="2ГИС" class="review-icon-img">
+              <div class="review-copy"><strong>2ГИС</strong><span>Оставить отзыв</span></div>
+            </a>
+          </div>
+          <div class="thanks">Спасибо за вашу поддержку и доверие! ♡</div>
         </div>
       </section>
 
       <footer class="footer">
         <div>© 2024 Территория красоты. Все права защищены.</div>
-        <div>Будь уверенной и неотразимой</div>
+        <div style="text-align: right;">Будь уверенной<br>и неотразимой</div>
       </footer>
     </div>
   </main>
 
   <script>
+    // Навигация меню
     document.querySelectorAll('a[href^="#"]').forEach(link => {
       link.addEventListener('click', e => {
-        const target = document.querySelector(link.getAttribute('href'));
+        const targetId = link.getAttribute('href');
+        if (targetId === '#') return;
+        const target = document.querySelector(targetId);
         if (!target) return;
         e.preventDefault();
         target.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -673,10 +634,35 @@
 
     const menuBtn = document.getElementById('menuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
-    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('open'));
-    mobileMenu.addEventListener('click', e => {
-      if (e.target === mobileMenu) mobileMenu.classList.remove('open');
-    });
+    
+    menuBtn.addEventListener('click', () => { mobileMenu.classList.add('open'); });
+    mobileMenu.addEventListener('click', e => { if (e.target === mobileMenu) mobileMenu.classList.remove('open'); });
+
+    // Логика зацикленного слайдера отзывов
+    function moveSlider(direction) {
+      const slider = document.getElementById('reviewsSlider');
+      // Ширина карточки отзыва + gap (12px)
+      const itemWidth = slider.querySelector('.review-item').offsetWidth + 12; 
+      const maxScrollLeft = slider.scrollWidth - slider.clientWidth;
+
+      if (direction === 1) { // Клик ВПРАВО
+        if (slider.scrollLeft >= maxScrollLeft - 10) {
+          // Если дошли до конца — возвращаемся плавно в начало
+          slider.scrollTo({ left: 0, behavior: 'smooth' });
+        } else {
+          // Листаем дальше
+          slider.scrollBy({ left: itemWidth, behavior: 'smooth' });
+        }
+      } else { // Клик ВЛЕВО
+        if (slider.scrollLeft <= 10) {
+          // Если мы в самом начале — перематываем в самый конец
+          slider.scrollTo({ left: maxScrollLeft, behavior: 'smooth' });
+        } else {
+          // Листаем назад
+          slider.scrollBy({ left: -itemWidth, behavior: 'smooth' });
+        }
+      }
+    }
   </script>
 </body>
 </html>

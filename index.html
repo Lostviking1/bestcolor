@@ -173,7 +173,7 @@
       border: 1px solid rgba(255,255,255,0.2);
     }
     .hero-btn.secondary {
-      color: #fff; background: rgba(255, 255, 255, 0.1);
+      color: #fff; background: rgba(31, 22, 16, 0.42);
       backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.8);
     }
 
@@ -240,7 +240,7 @@
 
     /* --- Услуги (Галерея) --- */
     .gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 16px; }
-    .work-card { overflow: hidden; border-radius: 14px; cursor: pointer; }
+    .work-card { overflow: hidden; border-radius: 14px; cursor: pointer; text-decoration: none; display: block; }
     .work-card img {
       width: 100%; aspect-ratio: 0.8; object-fit: cover; border-radius: 14px;
       box-shadow: 0 8px 18px rgba(135, 104, 76, 0.06); transition: transform 0.3s ease;
@@ -285,10 +285,84 @@
       box-shadow: 0 6px 16px rgba(135, 104, 76, 0.04);
     }
 
-    .stars { color: #f9a63a; font-size: 14px; margin-bottom: 8px; letter-spacing: 2px;}
-    .review-text { font-size: 13px; color: #5e5149; line-height: 1.4; font-style: italic; margin-bottom: 12px; min-height: 56px;}
-    .review-author { font-size: 12px; font-weight: 700; color: #3c3029; display: flex; align-items: center; gap: 8px;}
-    .review-author span { color: #a5988f; font-weight: 400; font-size: 11px;}
+    .review-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 10px;
+    }
+
+    .review-author {
+      font-size: 12px;
+      color: #3c3029;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+    }
+
+    .review-author img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid rgba(80, 56, 35, 0.14);
+      box-shadow: 0 2px 8px rgba(70, 49, 33, 0.14);
+      flex-shrink: 0;
+    }
+
+    .review-user-meta { min-width: 0; }
+    .review-user-name { font-weight: 700; font-size: 13px; color: #302620; line-height: 1.2; }
+    .review-date {
+      font-size: 12px;
+      color: #8e8074;
+      font-style: italic;
+      margin-top: 2px;
+      line-height: 1.2;
+    }
+
+    .review-more {
+      color: #9b8c80;
+      letter-spacing: 1px;
+      font-size: 18px;
+      line-height: 1;
+      padding: 2px 4px;
+      user-select: none;
+    }
+
+    .stars { color: #f9a63a; font-size: 14px; margin-bottom: 8px; letter-spacing: 2px; }
+    .review-text {
+      font-size: 14px;
+      color: #4a3e37;
+      line-height: 1.45;
+      margin-bottom: 10px;
+      min-height: 74px;
+    }
+
+    .review-source {
+      font-size: 12px;
+      color: #6c5f56;
+      margin-bottom: 10px;
+    }
+
+    .review-like-box {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border: 1px solid #e6dbcf;
+      border-radius: 8px;
+      padding: 4px 8px;
+      background: #fff;
+      font-size: 13px;
+      color: #4a3f38;
+      font-weight: 600;
+    }
+
+    .review-like-box img {
+      width: 18px;
+      height: 18px;
+      object-fit: contain;
+    }
 
     .slider-arrows {
       display: flex;
@@ -322,6 +396,54 @@
     .contact-meta { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 16px 0; color: #5e5149; font-size: 13px; line-height: 1.4; }
     .meta-box { background: #fff; border: 1px solid #eee2d7; border-radius: 14px; padding: 12px; text-align: center; }
     .meta-box strong { display: block; color: #3d3029; font-size: 12px; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.05em; }
+    .meta-title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+    .meta-title img {
+      width: 28px;
+      height: 28px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+    .meta-title strong {
+      margin: 0;
+      line-height: 1;
+    }
+    .location-extra {
+      margin-top: 12px;
+      border: 1px solid #e8ddcf;
+      border-radius: 14px;
+      background: #fff;
+      padding: 12px;
+    }
+    .location-extra-title {
+      margin: 0 0 8px;
+      color: #3d3029;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .location-extra-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: #5e5149;
+      line-height: 1.35;
+    }
+    .location-extra-item + .location-extra-item { margin-top: 6px; }
+    .location-extra-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
     
     /* ОБНОВЛЕНО: Белые кнопки соцсетей с иконками из папки */
     .socials { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 20px; }
@@ -366,6 +488,47 @@
       color: #a09288; font-size: 12px; line-height: 1.35;
     }
 
+    .sticky-cta {
+      position: fixed;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 12px;
+      width: min(100% - 20px, 500px);
+      z-index: 40;
+      display: none;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 8px;
+      padding: 8px;
+      border-radius: 16px;
+      background: rgba(249, 246, 241, 0.95);
+      border: 1px solid #e7ddd3;
+      box-shadow: 0 10px 24px rgba(64, 46, 32, 0.14);
+      backdrop-filter: blur(8px);
+    }
+
+    .sticky-cta a {
+      min-height: 44px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 700;
+      padding: 0 10px;
+    }
+
+    .sticky-cta .book {
+      color: #fff;
+      background: linear-gradient(135deg, #ddaf77, #613f1c);
+    }
+
+    .sticky-cta .chat {
+      color: #3d3029;
+      background: #fff;
+      border: 1px solid #e9ded2;
+    }
+
     /* --- Mobile Menu --- */
     .mobile-menu {
       position: fixed; inset: 0; background: rgba(36, 28, 24, 0.5);
@@ -391,6 +554,11 @@
       .hero-copy h1 { font-size: 32px; }
       .hero-copy { left: 18px; right: 18px; bottom: 26px; }
       .hero-actions { max-width: 100%; }
+    }
+
+    @media (max-width: 768px) {
+      body { padding-bottom: 80px; }
+      .sticky-cta { display: grid; }
     }
   </style>
 </head>
@@ -421,7 +589,7 @@
           <div class="brand-text">Территория<br>красоты</div>
         </div>
 
-        <button class="menu-btn" id="menuBtn" aria-label="Меню">
+        <button class="menu-btn" id="menuBtn" aria-label="Меню" aria-expanded="false" aria-controls="mobileMenu">
           <span></span>
         </button>
 
@@ -483,25 +651,25 @@
           <div class="eyebrow">Наши услуги</div>    
           <p class="desc">Вдохновение в каждой детали</p>
           <div class="gallery">
-            <div class="work-card">
+            <a class="work-card" href="#contacts">
               <img src="assets/img/work-1.png" alt="Сложное окрашивание">
               <p>Сложное окрашивание</p>
-            </div>
-            <div class="work-card">
+            </a>
+            <a class="work-card" href="#contacts">
               <img src="assets/img/work-2.png" alt="Идеальный блонд">
               <p>Идеальный блонд</p>
-            </div>
-            <div class="work-card">
+            </a>
+            <a class="work-card" href="#contacts">
               <img src="assets/img/work-3.png" alt="Тонирование">
               <p>Тонирование</p>
-            </div>
-            <div class="work-card">
+            </a>
+            <a class="work-card" href="#contacts">
               <img src="assets/img/work-4.png" alt="Укладки">
               <p>Укладки</p>
-            </div>
+            </a>
           </div>
           <div class="link-more-wrapper">
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="link-more">Смотреть все работы →</a>
+            <a href="https://instagram.com/mak.marina" target="_blank" rel="noopener noreferrer" class="link-more">Смотреть все работы →</a>
           </div>
         </div>    
       </section>
@@ -516,34 +684,78 @@
             <div class="reviews-slider" id="reviewsSlider">
               <!-- Отзыв 1 -->
               <div class="review-item">
+                <div class="review-head">
+                  <div class="review-author">
+                    <img src="assets/img/review-avatar-1.png" alt="Фото профиля Елены С.">
+                    <div class="review-user-meta">
+                      <div class="review-user-name">Елена С.</div>
+                      <div class="review-date">19 марта 2026</div>
+                    </div>
+                  </div>
+                  <div class="review-more" aria-hidden="true">•••</div>
+                </div>
                 <div class="stars">★★★★★</div>
                 <div class="review-text">«Делала сложное окрашивание, мастер просто супер! Волосы живые, цвет именно тот, который я хотела. Спасибо!»</div>
-                <div class="review-author">Елена С. <span>• 2ГИС</span></div>
+                <div class="review-source">Источник: 2ГИС</div>
+                <div class="review-like-box"><img src="assets/img/icon-heart-green.png" alt="Лайки">9</div>
               </div>
               <!-- Отзыв 2 -->
               <div class="review-item">
+                <div class="review-head">
+                  <div class="review-author">
+                    <img src="assets/img/review-avatar-2.png" alt="Фото профиля Алины М.">
+                    <div class="review-user-meta">
+                      <div class="review-user-name">Алина М.</div>
+                      <div class="review-date">28 января 2026</div>
+                    </div>
+                  </div>
+                  <div class="review-more" aria-hidden="true">•••</div>
+                </div>
                 <div class="stars">★★★★★</div>
                 <div class="review-text">«Очень уютный салон, приветливый персонал и вкусный кофе. Тотал блонд получился идеальным, без желтизны.»</div>
-                <div class="review-author">Алина М. <span>• Яндекс</span></div>
+                <div class="review-source">Источник: Яндекс Карты</div>
+                <div class="review-like-box"><img src="assets/img/icon-heart-green.png" alt="Лайки">14</div>
               </div>
               <!-- Отзыв 3 -->
               <div class="review-item">
+                <div class="review-head">
+                  <div class="review-author">
+                    <img src="assets/img/review-avatar-3.png" alt="Фото профиля Кристины В.">
+                    <div class="review-user-meta">
+                      <div class="review-user-name">Кристина В.</div>
+                      <div class="review-date">11 февраля 2026</div>
+                    </div>
+                  </div>
+                  <div class="review-more" aria-hidden="true">•••</div>
+                </div>
                 <div class="stars">★★★★★</div>
                 <div class="review-text">«Марина спасла мои волосы после неудачного окрашивания в другом месте. Теперь только к вам!»</div>
-                <div class="review-author">Кристина В. <span>• Instagram</span></div>
+                <div class="review-source">Источник: Instagram</div>
+                <div class="review-like-box"><img src="assets/img/icon-heart-green.png" alt="Лайки">6</div>
               </div>
               <!-- Отзыв 4 -->
               <div class="review-item">
+                <div class="review-head">
+                  <div class="review-author">
+                    <img src="assets/img/review-avatar-4.png" alt="Фото профиля Ольги">
+                    <div class="review-user-meta">
+                      <div class="review-user-name">Ольга</div>
+                      <div class="review-date">7 апреля 2026</div>
+                    </div>
+                  </div>
+                  <div class="review-more" aria-hidden="true">•••</div>
+                </div>
                 <div class="stars">★★★★★</div>
                 <div class="review-text">«Хожу сюда уже год. Идеальное тонирование и укладки, которые держатся несколько дней. Рекомендую!»</div>
-                <div class="review-author">Ольга <span>• Яндекс</span></div>
+                <div class="review-source">Источник: Яндекс Карты</div>
+                <div class="review-like-box"><img src="assets/img/icon-heart-green.png" alt="Лайки">12</div>
               </div>
             </div>
             
             <!-- Кнопки управления слайдером -->
             <div class="slider-arrows">
-              <button class="arrow-btn" onclick="moveSlider(-1)">❮</button>
-              <button class="arrow-btn" onclick="moveSlider(1)">❯</button>
+              <button class="arrow-btn" onclick="moveSlider(-1)" aria-label="Предыдущий отзыв">❮</button>
+              <button class="arrow-btn" onclick="moveSlider(1)" aria-label="Следующий отзыв">❯</button>
             </div>
           </div>
         </div>
@@ -554,8 +766,20 @@
         <div class="contacts-card">
           <div class="eyebrow">Запись</div>
           <div class="contact-meta">
-            <div class="meta-box"><strong>Время работы</strong>Пн–Вс: 09:00 – 21:00<br>Без выходных</div>
-            <div class="meta-box"><strong>Телефон</strong>+7 (917) 419-35-65<br>Звонок / WhatsApp</div>
+            <div class="meta-box">
+              <div class="meta-title">
+                <img src="assets/img/icon-time.png" alt="Иконка времени">
+                <strong>Время работы</strong>
+              </div>
+              Пн–Вс: 09:00 – 21:00<br>Без выходных
+            </div>
+            <div class="meta-box">
+              <div class="meta-title">
+                <img src="assets/img/icon-phone.png" alt="Иконка телефона">
+                <strong>Телефон</strong>
+              </div>
+              +7 (917) 419-35-65<br>Звонок / WhatsApp
+            </div>
           </div>
           
           <div class="socials">
@@ -570,13 +794,20 @@
             </a>
           </div>
 
-          <div class="address">Уфа, Российская 159/1, офис 49</div>
+          <div class="address">Уфа, Российская 159/1, офис 49, 4 этаж</div>
           
           <div class="map">
             <div style="position:relative;overflow:hidden;">
               <a href="https://yandex.com/maps/org/territoriya_krasoty/125972859834/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Территория красоты</a>
               <iframe src="https://yandex.com/map-widget/v1/?from=mapframe&ll=56.034220%2C54.771940&mode=search&oid=125972859834&ol=biz&z=18.8" width="100%" height="300" frameborder="0" allowfullscreen="true" style="position:relative; display:block;"></iframe>
             </div>
+          </div>
+
+          <div class="location-extra">
+            <p class="location-extra-title">Как нас найти</p>
+            <div class="location-extra-item"><span class="location-extra-dot"></span>Здание ROSSO APARTS.</div>
+            <div class="location-extra-item"><span class="location-extra-dot"></span>Ближайшая остановка «Глумилино».</div>
+            <div class="location-extra-item"><span class="location-extra-dot"></span>Рядом есть парковка для автомобилей.</div>
           </div>
         </div>
       </section>
@@ -602,7 +833,7 @@
               <div class="review-copy"><strong>Яндекс Карты</strong><span>Оставить отзыв</span></div>
             </a>
             
-            <a class="review-btn" href="https://2gis.ru" target="_blank" rel="noopener noreferrer">
+            <a class="review-btn" href="https://go.2gis.com/7LCWG" target="_blank" rel="noopener noreferrer">
               <img src="assets/img/icon-2gis.png" alt="2ГИС" class="review-icon-img">
               <div class="review-copy"><strong>2ГИС</strong><span>Оставить отзыв</span></div>
             </a>
@@ -618,6 +849,11 @@
     </div>
   </main>
 
+  <div class="sticky-cta" aria-label="Быстрые действия">
+    <a class="book" href="#contacts">Записаться</a>
+    <a class="chat" href="https://wa.me/79174193565" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+  </div>
+
   <script>
     // Навигация меню
     document.querySelectorAll('a[href^="#"]').forEach(link => {
@@ -628,15 +864,33 @@
         if (!target) return;
         e.preventDefault();
         target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        document.getElementById('mobileMenu').classList.remove('open');
+        setMenuState(false);
       });
     });
 
     const menuBtn = document.getElementById('menuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
     
-    menuBtn.addEventListener('click', () => { mobileMenu.classList.add('open'); });
-    mobileMenu.addEventListener('click', e => { if (e.target === mobileMenu) mobileMenu.classList.remove('open'); });
+    function setMenuState(isOpen) {
+      mobileMenu.classList.toggle('open', isOpen);
+      menuBtn.setAttribute('aria-expanded', String(isOpen));
+    }
+
+    menuBtn.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.contains('open');
+      setMenuState(!isOpen);
+    });
+
+    mobileMenu.addEventListener('click', e => {
+      if (e.target === mobileMenu) setMenuState(false);
+    });
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
+        setMenuState(false);
+        menuBtn.focus();
+      }
+    });
 
     // Логика зацикленного слайдера отзывов
     function moveSlider(direction) {

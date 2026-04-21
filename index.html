@@ -754,37 +754,94 @@
 
     @media (max-width: 410px) {
       .socials, .review-buttons, .contact-meta { grid-template-columns: 1fr; }
-      .hero-copy h1 { font-size: 32px; }
+      .shell { padding: 0 0 18px; }
+      .phone {
+        border-left: 0;
+        border-right: 0;
+        border-radius: 0;
+      }
+      .menu-btn {
+        top: 16px;
+        right: 16px;
+        width: 44px;
+        height: 44px;
+      }
       .hero-copy {
-        left: 14px;
-        bottom: 14px;
-        max-width: calc(100% - 150px);
+        left: 18px;
+        right: 18px;
+        bottom: 66px;
+        max-width: 58%;
+      }
+      .hero-copy h1 {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        padding: 0;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        white-space: nowrap;
+        border: 0;
+      }
+      .hero-copy .sub {
+        margin: 0;
+        padding: 7px 10px;
+        border-radius: 12px;
+        font-size: 13px;
+        line-height: 1.25;
+        max-width: 178px;
       }
       .hero-actions {
-        right: 14px;
+        left: 18px;
+        right: 18px;
         bottom: 14px;
-        width: 144px;
+        width: auto;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+      }
+      .hero-btn {
+        min-height: 42px;
+        padding: 0 12px;
+        font-size: 13px;
+        box-shadow: 0 8px 18px rgba(58, 39, 25, 0.14);
       }
     }
 
     @media (max-width: 360px) {
       .hero-copy {
-        left: 14px;
-        right: 14px;
-        bottom: 86px;
-        max-width: none;
+        bottom: 62px;
+        max-width: 56%;
       }
       .hero-actions {
         left: 14px;
         right: 14px;
-        bottom: 14px;
-        width: auto;
+        gap: 7px;
+      }
+      .hero-copy .sub {
+        max-width: 160px;
+        font-size: 12px;
+      }
+      .hero-btn {
+        min-height: 40px;
+        font-size: 13px;
       }
     }
 
     @media (max-width: 768px) {
-      body { padding-bottom: 80px; }
-      .sticky-cta { display: grid; }
+      body { padding-bottom: 66px; }
+      .sticky-cta {
+        display: grid;
+        bottom: 8px;
+        width: min(100% - 24px, 460px);
+        padding: 6px;
+        border-radius: 14px;
+      }
+      .sticky-cta a {
+        min-height: 38px;
+        border-radius: 9px;
+        font-size: 13px;
+        padding: 0 8px;
+      }
     }
   </style>
 </head>

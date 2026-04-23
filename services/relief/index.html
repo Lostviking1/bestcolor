@@ -1,19 +1,19 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Рельефное окрашивание в Уфе — объем и блики | Территория красоты</title>
-  <meta name="description" content="Рельефное окрашивание в Уфе для глубины цвета, бликов и визуального объема. Подходит русым и брюнеткам, записывайтесь на консультацию." />
+  <title>Рельефное окрашивание в Уфе: глубина, блики и объем | Территория красоты</title>
+  <meta name="description" content="Рельефное окрашивание в Уфе для глубины, бликов и визуального объема. Подбираем контрастность, схему осветления, тонирование и уход." />
   <link rel="canonical" href="https://bestcolorufa.ru/services/relief/index.html" />
-  <meta property="og:title" content="Рельефное окрашивание в Уфе — объем и блики | Территория красоты" />
-  <meta property="og:description" content="Рельефное окрашивание в Уфе для глубины цвета, бликов и визуального объема. Подходит русым и брюнеткам, записывайтесь на консультацию." />
+  <meta property="og:title" content="Рельефное окрашивание в Уфе: глубина, блики и объем | Территория красоты" />
+  <meta property="og:description" content="Блики, глубина и визуальный объем с подбором контрастности и тонирования." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://bestcolorufa.ru/services/relief/index.html" />
   <meta property="og:image" content="https://bestcolorufa.ru/assets/services/relief/images/cover.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Рельефное окрашивание в Уфе — объем и блики | Территория красоты" />
-  <meta name="twitter:description" content="Рельефное окрашивание в Уфе для глубины цвета, бликов и визуального объема. Подходит русым и брюнеткам, записывайтесь на консультацию." />
+  <meta name="twitter:title" content="Рельефное окрашивание в Уфе: глубина, блики и объем | Территория красоты" />
+  <meta name="twitter:description" content="Блики, глубина и визуальный объем с подбором контрастности и тонирования." />
   <meta name="twitter:image" content="https://bestcolorufa.ru/assets/services/relief/images/cover.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1049,14 +1049,73 @@
         font-size: 12px;
       }
     }
+  
+    /* Booking modal final behavior */
+    body.booking-open { overflow: hidden; }
+    body.booking-open::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: 90;
+      background: rgba(36, 28, 24, 0.42);
+      backdrop-filter: blur(3px);
+    }
+    .booking-dropdown {
+      left: 50% !important;
+      top: 50% !important;
+      right: auto !important;
+      bottom: auto !important;
+      width: min(360px, calc(100vw - 32px)) !important;
+      transform: translate(-50%, -46%) scale(0.98) !important;
+    }
+    .booking-dropdown.open {
+      transform: translate(-50%, -50%) scale(1) !important;
+    }
+    @media (max-width: 480px) {
+      .booking-dropdown {
+        left: 50% !important;
+        top: 50% !important;
+        right: auto !important;
+        bottom: auto !important;
+        width: min(360px, calc(100vw - 24px)) !important;
+      }
+    }
+  
+    /* Compact service FAQ */
+    .service-faq {
+      display: grid;
+      gap: 8px;
+      margin: 10px 0 18px;
+    }
+    .service-faq details {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #fff;
+      padding: 0 12px;
+    }
+    .service-faq summary {
+      cursor: pointer;
+      padding: 11px 0;
+      color: #3c3029;
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 1.35;
+    }
+    .service-faq p {
+      margin: 0;
+      padding: 0 0 12px;
+      color: #5f524a;
+      font-size: 13px;
+      line-height: 1.5;
+    }
   </style>
   <script type="application/ld+json">
 {
     "@context":  "https://schema.org",
     "@type":  "Service",
     "@id":  "https://bestcolorufa.ru/services/relief/index.html#service",
-    "name":  "Рельефное окрашивание в Уфе — объем и блики",
-    "description":  "Рельефное окрашивание в Уфе для глубины цвета, бликов и визуального объема. Подходит русым и брюнеткам, записывайтесь на консультацию.",
+    "name":  "Рельефное окрашивание в Уфе: глубина, блики и объем",
+    "description":  "Рельефное окрашивание в Уфе для глубины, бликов и визуального объема. Подбираем контрастность, схему осветления, тонирование и уход.",
     "serviceType":  "Рельефное окрашивание",
     "url":  "https://bestcolorufa.ru/services/relief/index.html",
     "image":  "https://bestcolorufa.ru/assets/services/relief/images/cover.png",
@@ -1113,7 +1172,7 @@
                            "name":  "Рельефное окрашивание подходит брюнеткам?",
                            "acceptedAnswer":  {
                                                   "@type":  "Answer",
-                                                  "text":  "Да, особенно если хочется добавить блики и глубину без полного блонда."
+                                                  "text":  "Да, если хочется добавить блики и глубину без полного перехода в блонд. Контрастность подбирается по базе и желаемому эффекту."
                                               }
                        },
                        {
@@ -1121,7 +1180,15 @@
                            "name":  "Чем рельеф отличается от однотонного окрашивания?",
                            "acceptedAnswer":  {
                                                   "@type":  "Answer",
-                                                  "text":  "В рельефе есть светлые и темные зоны, поэтому цвет выглядит объемным и живым."
+                                                  "text":  "В рельефе есть светлые и темные зоны, поэтому цвет выглядит объемным, живым и лучше читается в движении."
+                                              }
+                       },
+                       {
+                           "@type":  "Question",
+                           "name":  "Чем рельеф отличается от Airtouch?",
+                           "acceptedAnswer":  {
+                                                  "@type":  "Answer",
+                                                  "text":  "Airtouch строится на выдувании прядей и мягком переходе, а рельефное окрашивание может сочетать разные схемы бликов, затемнения и тонирования для глубины."
                                               }
                        },
                        {
@@ -1129,10 +1196,44 @@
                            "name":  "Как часто обновлять блики?",
                            "acceptedAnswer":  {
                                                   "@type":  "Answer",
-                                                  "text":  "Обычно раз в 3–5 месяцев, а тонирование можно делать чаще по состоянию оттенка."
+                                                  "text":  "Обычно раз в 3-5 месяцев, а тонирование можно делать чаще, если оттенок стал теплым или потерял блеск."
+                                              }
+                       },
+                       {
+                           "@type":  "Question",
+                           "name":  "Можно ли сделать рельеф без сильного осветления?",
+                           "acceptedAnswer":  {
+                                                  "@type":  "Answer",
+                                                  "text":  "Да, иногда достаточно мягких бликов и тонирования. Но на очень темной или окрашенной базе результат будет более теплым и деликатным."
                                               }
                        }
                    ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Главная",
+      "item": "https://bestcolorufa.ru/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Услуги",
+      "item": "https://bestcolorufa.ru/#works"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Рельефное окрашивание",
+      "item": "https://bestcolorufa.ru/services/relief/index.html"
+    }
+  ]
 }
   </script>
 </head>
@@ -1140,7 +1241,7 @@
   <div class="booking-dropdown" id="bookingDropdown" aria-hidden="true">
     <a class="booking-primary" href="https://yandex.ru/business/widget/request/company/125972859834" target="_blank" rel="noopener noreferrer">
       <span class="booking-icon"><img src="../../assets/img/icons/yandex.png" alt=""></span>
-      <span>Записаться онлайн</span>
+      <span>Консультация по рельефному окрашиванию</span>
     </a>
     <div class="booking-divider"></div>
     <div class="booking-caption">Или напишите нам</div>
@@ -1189,28 +1290,30 @@
           <h1 style="margin: 0 0 16px; font-family: 'Cormorant Garamond', serif; font-size: 28px; color: #2d2019; line-height: 1.1;">Рельефное окрашивание в Уфе: объем, глубина и блики</h1>
 
           <div class="service-content">
-            <p>Рельефное окрашивание уфа создает игру светлых и темных прядей, благодаря чему волосы выглядят гуще и объемнее. Это объемное окрашивание волос подходит тем, кто хочет выразительный, но не плоский цвет.</p>
-            <p>В «Территории красоты» окрашивание с бликами подбирается под натуральную базу, тон кожи и желаемую контрастность. Такой результат особенно красиво смотрится на русых, шатенках и брюнетках.</p>
+            <p>Рельефное окрашивание создает глубину: часть прядей становится светлее, часть сохраняет натуральную или более темную базу. За счет этого волосы выглядят объемнее, цвет не кажется плоским, а укладка лучше читается даже без сложной формы.</p>
+            <p>В «Территории красоты» в Уфе мастер подбирает контрастность под вашу базу, тон кожи и привычный стиль. Рельеф может быть мягким и натуральным, заметным и графичным или почти невидимым у корня, если важно спокойное отрастание.</p>
 
             <h2>Кому подходит</h2>
             <ul>
-              <li>хочется добавить волосам визуальную густоту</li>
-              <li>нужен цвет с глубиной, а не однотонное окрашивание</li>
-              <li>вы хотите блики без полного перехода в блонд</li>
-              <li>важно, чтобы окрашивание красиво отрастало</li>
-            </ul>
-
-            <h2>Что входит в услугу</h2>
-            <ul>
-              <li>консультация и выбор уровня контраста</li>
-              <li>разработка схемы светлых и темных прядей</li>
-              <li>осветление выбранных зон</li>
-              <li>тонирование для глубины и чистого оттенка</li>
-              <li>уход и рекомендации по поддержанию блеска</li>
+              <li>хочется добавить волосам визуальную густоту и движение</li>
+              <li>однотонный цвет выглядит плоским, а хочется бликов и глубины</li>
+              <li>вы хотите светлее, но без полного перехода в блонд</li>
+              <li>важно, чтобы окрашивание мягко отрастало и не требовало частой коррекции</li>
             </ul>
 
             <h2>Как проходит процедура</h2>
-            <p>Мастер определяет, где нужны блики, а где лучше сохранить глубину. Затем выполняется осветление выбранных прядей, при необходимости затемнение корня или отдельных зон, тонирование и уход. Итог — многомерный цвет с движением.</p>
+            <ol>
+              <li><strong>Консультация.</strong> Мастер определяет, какой рельеф нужен: мягкие солнечные блики, выраженный контраст или деликатное обновление.</li>
+              <li><strong>Схема прядей.</strong> Выбираются зоны осветления и глубины, чтобы цвет красиво работал с вашей стрижкой и пробором.</li>
+              <li><strong>Осветление и тонирование.</strong> Пряди осветляются под контролем фона, затем оттенок собирается тонированием.</li>
+              <li><strong>Уход и финиш.</strong> После процедуры мастер показывает, как рельеф выглядит в укладке, и дает рекомендации по поддержанию блеска.</li>
+            </ol>
+
+            <h2>Что вы получите в результате</h2>
+            <p>Многомерный цвет с бликами, глубиной и визуальным объемом. Волосы выглядят живее, лицо мягче, а общий оттенок становится интереснее без тотального осветления.</p>
+
+            <h2>Что важно знать до записи</h2>
+            <p>Степень контраста зависит от исходной базы и истории окрашиваний. На темных окрашенных волосах блики могут получиться теплее, чем на натуральной базе, поэтому иногда мастер предлагает тест-прядь или более мягкую схему.</p>
 
             <h2>Сколько времени занимает</h2>
             <p>Обычно процедура занимает 3–5 часов. На длинных и густых волосах или при высокой контрастности время может увеличиться.</p>
@@ -1222,15 +1325,31 @@
             <p>Стоимость зависит от длины, густоты, количества осветляемых зон, контрастности, тонирования и ухода после окрашивания.</p>
 
             <h2>FAQ</h2>
-            <h3>Рельефное окрашивание подходит брюнеткам?</h3>
-            <p>Да, особенно если хочется добавить блики и глубину без полного блонда.</p>
-            <h3>Чем рельеф отличается от однотонного окрашивания?</h3>
-            <p>В рельефе есть светлые и темные зоны, поэтому цвет выглядит объемным и живым.</p>
-            <h3>Как часто обновлять блики?</h3>
-            <p>Обычно раз в 3–5 месяцев, а тонирование можно делать чаще по состоянию оттенка.</p>
+            <div class="service-faq">
+              <details>
+                <summary>Рельефное окрашивание подходит брюнеткам?</summary>
+                <p>Да, если хочется добавить блики и глубину без полного перехода в блонд. Контрастность подбирается по базе и желаемому эффекту.</p>
+              </details>
+              <details>
+                <summary>Чем рельеф отличается от однотонного окрашивания?</summary>
+                <p>В рельефе есть светлые и темные зоны, поэтому цвет выглядит объемным, живым и лучше читается в движении.</p>
+              </details>
+              <details>
+                <summary>Чем рельеф отличается от Airtouch?</summary>
+                <p>Airtouch строится на выдувании прядей и мягком переходе, а рельефное окрашивание может сочетать разные схемы бликов, затемнения и тонирования для глубины.</p>
+              </details>
+              <details>
+                <summary>Как часто обновлять блики?</summary>
+                <p>Обычно раз в 3-5 месяцев, а тонирование можно делать чаще, если оттенок стал теплым или потерял блеск.</p>
+              </details>
+              <details>
+                <summary>Можно ли сделать рельеф без сильного осветления?</summary>
+                <p>Да, иногда достаточно мягких бликов и тонирования. Но на очень темной или окрашенной базе результат будет более теплым и деликатным.</p>
+              </details>
+            </div>
 
             <h2>Другие услуги</h2>
-            <p>Если вы сравниваете варианты окрашивания волос уфа, посмотрите соседние направления салона:</p>
+            <p>Если нужен максимально мягкий переход, сравните рельеф с <a href="../airtouch/index.html">Airtouch</a>. Если хочется классических светлых прядей, подойдет <a href="../melirovanie/index.html">мелирование</a>. Для поддержания оттенка между визитами используйте <a href="../tonirovanie/index.html">тонирование</a>. Подход мастеров к рельефу и поддержке блонда описан в разделе <a href="../../about/masters/index.html">о колористах</a>.</p>
             <ul>
               <li><a href="../tonirovanie/index.html">Тонирование</a></li>
               <li><a href="../melirovanie/index.html">Мелирование</a></li>
@@ -1243,7 +1362,7 @@
           </div>          <div class="service-booking-card">
             <a class="booking-primary" href="https://yandex.ru/business/widget/request/company/125972859834" target="_blank" rel="noopener noreferrer">
               <span class="booking-icon"><img src="../../assets/img/icons/yandex.png" alt=""></span>
-              <span>Записаться онлайн</span>
+              <span>Записаться на рельефное окрашивание</span>
             </a>
             <div class="booking-divider"></div>
             <div class="booking-caption">Или напишите нам</div>
@@ -1327,6 +1446,7 @@
       const setBookingState = (isOpen, toggle = activeToggle) => {
         dropdown.classList.toggle('open', isOpen);
         dropdown.setAttribute('aria-hidden', String(!isOpen));
+        document.body.classList.toggle('booking-open', isOpen);
         toggles.forEach(item => item.setAttribute('aria-expanded', String(isOpen && item === toggle)));
         activeToggle = isOpen ? toggle : null;
         if (isOpen && toggle) placeDropdown(toggle);
@@ -1367,3 +1487,5 @@
   </script>
 </body>
 </html>
+
+

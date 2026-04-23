@@ -1,19 +1,19 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Тонирование волос в Уфе — обновление цвета | Территория красоты</title>
-  <meta name="description" content="Тонирование волос в Уфе для свежего оттенка, блеска и нейтрализации желтизны. Безаммиачные красители и бережный уход в салоне." />
+  <title>Тонирование волос в Уфе: свежий оттенок, блеск и уход | Территория красоты</title>
+  <meta name="description" content="Тонирование волос в Уфе для обновления блонда, нейтрализации теплого оттенка и блеска. Диагностика базы, мягкая формула и рекомендации по уходу." />
   <link rel="canonical" href="https://bestcolorufa.ru/services/tonirovanie/index.html" />
-  <meta property="og:title" content="Тонирование волос в Уфе — обновление цвета | Территория красоты" />
-  <meta property="og:description" content="Тонирование волос в Уфе для свежего оттенка, блеска и нейтрализации желтизны. Безаммиачные красители и бережный уход в салоне." />
+  <meta property="og:title" content="Тонирование волос в Уфе: свежий оттенок, блеск и уход | Территория красоты" />
+  <meta property="og:description" content="Обновление блонда, нейтрализация теплого оттенка и мягкий блеск с диагностикой базы." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://bestcolorufa.ru/services/tonirovanie/index.html" />
   <meta property="og:image" content="https://bestcolorufa.ru/assets/services/tonirovanie/images/cover.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Тонирование волос в Уфе — обновление цвета | Территория красоты" />
-  <meta name="twitter:description" content="Тонирование волос в Уфе для свежего оттенка, блеска и нейтрализации желтизны. Безаммиачные красители и бережный уход в салоне." />
+  <meta name="twitter:title" content="Тонирование волос в Уфе: свежий оттенок, блеск и уход | Территория красоты" />
+  <meta name="twitter:description" content="Обновление блонда, нейтрализация теплого оттенка и мягкий блеск с диагностикой базы." />
   <meta name="twitter:image" content="https://bestcolorufa.ru/assets/services/tonirovanie/images/cover.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1049,14 +1049,73 @@
         font-size: 12px;
       }
     }
+  
+    /* Booking modal final behavior */
+    body.booking-open { overflow: hidden; }
+    body.booking-open::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: 90;
+      background: rgba(36, 28, 24, 0.42);
+      backdrop-filter: blur(3px);
+    }
+    .booking-dropdown {
+      left: 50% !important;
+      top: 50% !important;
+      right: auto !important;
+      bottom: auto !important;
+      width: min(360px, calc(100vw - 32px)) !important;
+      transform: translate(-50%, -46%) scale(0.98) !important;
+    }
+    .booking-dropdown.open {
+      transform: translate(-50%, -50%) scale(1) !important;
+    }
+    @media (max-width: 480px) {
+      .booking-dropdown {
+        left: 50% !important;
+        top: 50% !important;
+        right: auto !important;
+        bottom: auto !important;
+        width: min(360px, calc(100vw - 24px)) !important;
+      }
+    }
+  
+    /* Compact service FAQ */
+    .service-faq {
+      display: grid;
+      gap: 8px;
+      margin: 10px 0 18px;
+    }
+    .service-faq details {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #fff;
+      padding: 0 12px;
+    }
+    .service-faq summary {
+      cursor: pointer;
+      padding: 11px 0;
+      color: #3c3029;
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 1.35;
+    }
+    .service-faq p {
+      margin: 0;
+      padding: 0 0 12px;
+      color: #5f524a;
+      font-size: 13px;
+      line-height: 1.5;
+    }
   </style>
   <script type="application/ld+json">
 {
     "@context":  "https://schema.org",
     "@type":  "Service",
     "@id":  "https://bestcolorufa.ru/services/tonirovanie/index.html#service",
-    "name":  "Тонирование волос в Уфе — обновление цвета",
-    "description":  "Тонирование волос в Уфе для свежего оттенка, блеска и нейтрализации желтизны. Безаммиачные красители и бережный уход в салоне.",
+    "name":  "Тонирование волос в Уфе: свежий оттенок, блеск и уход",
+    "description":  "Тонирование волос в Уфе для обновления блонда, нейтрализации теплого оттенка и блеска. Диагностика базы, мягкая формула и рекомендации по уходу.",
     "serviceType":  "Тонирование волос",
     "url":  "https://bestcolorufa.ru/services/tonirovanie/index.html",
     "image":  "https://bestcolorufa.ru/assets/services/tonirovanie/images/cover.png",
@@ -1113,7 +1172,15 @@
                            "name":  "Тонирование осветляет волосы?",
                            "acceptedAnswer":  {
                                                   "@type":  "Answer",
-                                                  "text":  "Нет, тонирование не заменяет осветление. Оно корректирует оттенок, добавляет блеск и помогает нейтрализовать желтизну."
+                                                  "text":  "Нет, тонирование не заменяет осветление. Оно корректирует уже существующую базу: убирает лишнюю теплоту, добавляет нюанс, глубину и блеск."
+                                              }
+                       },
+                       {
+                           "@type":  "Question",
+                           "name":  "Когда нужно тонировать блонд?",
+                           "acceptedAnswer":  {
+                                                  "@type":  "Answer",
+                                                  "text":  "Обычно оттенок обновляют раз в 4-6 недель или раньше, если блонд стал желтым, серым, тусклым или потерял мягкость."
                                               }
                        },
                        {
@@ -1121,7 +1188,7 @@
                            "name":  "Можно ли тонировать поврежденные волосы?",
                            "acceptedAnswer":  {
                                                   "@type":  "Answer",
-                                                  "text":  "Чаще всего да, но мастер сначала оценивает состояние волос и подбирает максимально мягкий состав."
+                                                  "text":  "Чаще всего да, но мастер сначала оценивает пористость, ломкость и состояние длины. Иногда перед оттенком лучше сделать уход или выбрать более мягкую формулу."
                                               }
                        },
                        {
@@ -1129,10 +1196,44 @@
                            "name":  "Как долго держится тонирование?",
                            "acceptedAnswer":  {
                                                   "@type":  "Answer",
-                                                  "text":  "Обычно 3–6 недель. Стойкость зависит от ухода, пористости волос и частоты мытья головы."
+                                                  "text":  "Обычно 3-6 недель. Стойкость зависит от пористости волос, домашнего ухода, частоты мытья, горячих укладок и выбранного оттенка."
+                                              }
+                       },
+                       {
+                           "@type":  "Question",
+                           "name":  "Можно ли тонированием убрать пятна?",
+                           "acceptedAnswer":  {
+                                                  "@type":  "Answer",
+                                                  "text":  "Небольшую теплоту или тусклость можно скорректировать, но выраженные пятна и полосы чаще требуют исправления окрашивания."
                                               }
                        }
                    ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Главная",
+      "item": "https://bestcolorufa.ru/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Услуги",
+      "item": "https://bestcolorufa.ru/#works"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Тонирование волос",
+      "item": "https://bestcolorufa.ru/services/tonirovanie/index.html"
+    }
+  ]
 }
   </script>
 </head>
@@ -1140,7 +1241,7 @@
   <div class="booking-dropdown" id="bookingDropdown" aria-hidden="true">
     <a class="booking-primary" href="https://yandex.ru/business/widget/request/company/125972859834" target="_blank" rel="noopener noreferrer">
       <span class="booking-icon"><img src="../../assets/img/icons/yandex.png" alt=""></span>
-      <span>Записаться онлайн</span>
+      <span>Консультация по тонированию</span>
     </a>
     <div class="booking-divider"></div>
     <div class="booking-caption">Или напишите нам</div>
@@ -1189,28 +1290,31 @@
           <h1 style="margin: 0 0 16px; font-family: 'Cormorant Garamond', serif; font-size: 28px; color: #2d2019; line-height: 1.1;">Тонирование волос в Уфе: свежий оттенок и блеск</h1>
 
           <div class="service-content">
-            <p>Тонирование волос уфа помогает обновить оттенок, вернуть блеск и сделать цвет более ухоженным без агрессивного осветления. Особенно часто услуга нужна блондинкам, когда требуется убрать желтизну волос и вернуть чистый нюанс.</p>
-            <p>В салоне «Территория красоты» тонирование блонда уфа выполняется на профессиональных красителях и подбирается под текущую базу. Нейтрализация желтизны проходит мягко, чтобы цвет выглядел естественно, а волосы оставались приятными на ощупь.</p>
+            <p>Тонирование помогает вернуть цвету свежесть, блеск и нужный нюанс без повторного осветления. Чаще всего его выбирают после блонда, мелирования, Airtouch или рельефного окрашивания, когда оттенок стал теплее, тусклее или потерял мягкость.</p>
+            <p>В «Территории красоты» в Уфе мастер сначала смотрит базу: насколько волосы пористые, какой фон проявился, есть ли пятна и хватит ли мягкого оттеночного состава. Так тонирование не превращается в случайный «серый фильтр», а поддерживает именно тот оттенок, который вам идет.</p>
 
             <h2>Кому подходит</h2>
             <ul>
-              <li>блонд стал желтым, серым или тусклым</li>
-              <li>после окрашивания оттенок вымылся и потерял глубину</li>
-              <li>нужно освежить цвет без сильного воздействия</li>
-              <li>вы хотите добавить блеск и ухоженный вид перед событием</li>
-            </ul>
-
-            <h2>Что входит в услугу</h2>
-            <ul>
-              <li>оценка текущего оттенка и пористости волос</li>
-              <li>подбор формулы тонирования</li>
-              <li>мягкое нанесение красителя или оттеночного состава</li>
-              <li>уход после процедуры</li>
-              <li>рекомендации по поддержанию цвета дома</li>
+              <li>блонд стал желтым, слишком серым, тусклым или неровным по нюансу</li>
+              <li>после мелирования, Airtouch или тотал блонда оттенок вымылся и потерял глубину</li>
+              <li>нужно освежить цвет перед событием без нового осветления</li>
+              <li>волосам не хватает блеска, а цвет выглядит сухим и «пыльным»</li>
             </ul>
 
             <h2>Как проходит процедура</h2>
-            <p>Мастер смотрит, какой нежелательный оттенок появился на волосах, и подбирает формулу. Состав наносится на нужное время, затем смывается, выполняется уход и укладка. Итог — более ровный, свежий и блестящий цвет.</p>
+            <ol>
+              <li><strong>Диагностика.</strong> Мастер оценивает оттенок, пористость, сухость и участки, где цвет вымылся сильнее.</li>
+              <li><strong>Подбор формулы.</strong> Выбирается направление: нейтрализовать желтизну, смягчить серость, добавить бежевый, холодный, карамельный или натуральный нюанс.</li>
+              <li><strong>Нанесение и контроль.</strong> Состав наносится на нужное время, мастер следит, чтобы оттенок не затемнился и не ушел в лишнюю холодность.</li>
+              <li><strong>Уход и рекомендации.</strong> После смывания выполняется уход, укладка и короткий план домашней поддержки цвета.</li>
+            </ol>
+
+            <h2>Что вы получите в результате</h2>
+            <p>Более ровный, свежий и блестящий оттенок без жесткой смены цвета. Блонд выглядит ухоженнее, теплота становится мягче, а длина визуально плотнее за счет гладкости и блеска.</p>
+
+            <h2>Что важно знать до записи</h2>
+            <p>Тонирование не осветляет волосы и не исправляет сильные пятна, полосы или неудачную базу. Если цвет очень неровный, мастер может предложить <a href="../correction/index.html">исправление окрашивания</a> или сначала мягкое выравнивание.</p>
+            <!-- TODO: уточнить бренды тонирующих красителей и уходов, чтобы добавить их в текст без риска ошибки. -->
 
             <h2>Сколько времени занимает</h2>
             <p>В среднем тонирование занимает 1–2 часа. На длинных или густых волосах время может увеличиться.</p>
@@ -1222,15 +1326,31 @@
             <p>Цена зависит от длины, густоты, расхода красителя, необходимости предварительного ухода и сложности нейтрализации оттенка.</p>
 
             <h2>FAQ</h2>
-            <h3>Тонирование осветляет волосы?</h3>
-            <p>Нет, тонирование не заменяет осветление. Оно корректирует оттенок, добавляет блеск и помогает нейтрализовать желтизну.</p>
-            <h3>Можно ли тонировать поврежденные волосы?</h3>
-            <p>Чаще всего да, но мастер сначала оценивает состояние волос и подбирает максимально мягкий состав.</p>
-            <h3>Как долго держится тонирование?</h3>
-            <p>Обычно 3–6 недель. Стойкость зависит от ухода, пористости волос и частоты мытья головы.</p>
+            <div class="service-faq">
+              <details>
+                <summary>Тонирование осветляет волосы?</summary>
+                <p>Нет, тонирование не заменяет осветление. Оно корректирует уже существующую базу: убирает лишнюю теплоту, добавляет нюанс, глубину и блеск.</p>
+              </details>
+              <details>
+                <summary>Когда нужно тонировать блонд?</summary>
+                <p>Обычно оттенок обновляют раз в 4-6 недель или раньше, если блонд стал желтым, серым, тусклым или потерял мягкость.</p>
+              </details>
+              <details>
+                <summary>Можно ли тонировать поврежденные волосы?</summary>
+                <p>Чаще всего да, но мастер сначала оценивает пористость, ломкость и состояние длины. Иногда перед оттенком лучше сделать уход или выбрать более мягкую формулу.</p>
+              </details>
+              <details>
+                <summary>Как долго держится тонирование?</summary>
+                <p>Обычно 3-6 недель. Стойкость зависит от пористости волос, домашнего ухода, частоты мытья, горячих укладок и выбранного оттенка.</p>
+              </details>
+              <details>
+                <summary>Можно ли тонированием убрать пятна?</summary>
+                <p>Небольшую теплоту или тусклость можно скорректировать, но выраженные пятна и полосы чаще требуют исправления окрашивания.</p>
+              </details>
+            </div>
 
             <h2>Другие услуги</h2>
-            <p>Если вы сравниваете варианты окрашивания волос уфа, посмотрите соседние направления салона:</p>
+            <p>Тонирование хорошо поддерживает <a href="../total-blond/index.html">тотал блонд</a>, <a href="../airtouch/index.html">Airtouch</a>, <a href="../melirovanie/index.html">мелирование</a> и <a href="../relief/index.html">рельефное окрашивание</a>. Если оттенок стал темным, пятнистым или сильно неровным, лучше начать с <a href="../correction/index.html">коррекции цвета</a>. Подробнее о специализации можно посмотреть на странице <a href="../../about/masters/index.html">колористов Марины и Елены</a>.</p>
             <ul>
               <li><a href="../melirovanie/index.html">Мелирование</a></li>
               <li><a href="../total-blond/index.html">Тотал блонд</a></li>
@@ -1243,7 +1363,7 @@
           </div>          <div class="service-booking-card">
             <a class="booking-primary" href="https://yandex.ru/business/widget/request/company/125972859834" target="_blank" rel="noopener noreferrer">
               <span class="booking-icon"><img src="../../assets/img/icons/yandex.png" alt=""></span>
-              <span>Записаться онлайн</span>
+              <span>Записаться на тонирование</span>
             </a>
             <div class="booking-divider"></div>
             <div class="booking-caption">Или напишите нам</div>
@@ -1327,6 +1447,7 @@
       const setBookingState = (isOpen, toggle = activeToggle) => {
         dropdown.classList.toggle('open', isOpen);
         dropdown.setAttribute('aria-hidden', String(!isOpen));
+        document.body.classList.toggle('booking-open', isOpen);
         toggles.forEach(item => item.setAttribute('aria-expanded', String(isOpen && item === toggle)));
         activeToggle = isOpen ? toggle : null;
         if (isOpen && toggle) placeDropdown(toggle);
@@ -1367,3 +1488,5 @@
   </script>
 </body>
 </html>
+
+

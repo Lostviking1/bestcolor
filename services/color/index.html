@@ -1,19 +1,19 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Цветное окрашивание в Уфе — яркий и скрытый цвет | Территория красоты</title>
-  <meta name="description" content="Цветное окрашивание в Уфе: яркие, пастельные и скрытые оттенки на подготовленной базе. Поможем выбрать цвет и сохранить качество волос." />
+  <title>Цветное и скрытое окрашивание в Уфе | Территория красоты</title>
+  <meta name="description" content="Цветное и скрытое окрашивание в Уфе: яркие, пастельные и акцентные пряди на подготовленной базе. Диагностика, осветление по показаниям и уход." />
   <link rel="canonical" href="https://bestcolorufa.ru/services/color/index.html" />
-  <meta property="og:title" content="Цветное окрашивание в Уфе — яркий и скрытый цвет | Территория красоты" />
-  <meta property="og:description" content="Цветное окрашивание в Уфе: яркие, пастельные и скрытые оттенки на подготовленной базе. Поможем выбрать цвет и сохранить качество волос." />
+  <meta property="og:title" content="Цветное и скрытое окрашивание в Уфе | Территория красоты" />
+  <meta property="og:description" content="Яркие, пастельные и скрытые пряди с диагностикой базы и уходом после цвета." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://bestcolorufa.ru/services/color/index.html" />
   <meta property="og:image" content="https://bestcolorufa.ru/assets/services/color/images/cover.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Цветное окрашивание в Уфе — яркий и скрытый цвет | Территория красоты" />
-  <meta name="twitter:description" content="Цветное окрашивание в Уфе: яркие, пастельные и скрытые оттенки на подготовленной базе. Поможем выбрать цвет и сохранить качество волос." />
+  <meta name="twitter:title" content="Цветное и скрытое окрашивание в Уфе | Территория красоты" />
+  <meta name="twitter:description" content="Яркие, пастельные и скрытые пряди с диагностикой базы и уходом после цвета." />
   <meta name="twitter:image" content="https://bestcolorufa.ru/assets/services/color/images/cover.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1049,14 +1049,73 @@
         font-size: 12px;
       }
     }
+  
+    /* Booking modal final behavior */
+    body.booking-open { overflow: hidden; }
+    body.booking-open::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: 90;
+      background: rgba(36, 28, 24, 0.42);
+      backdrop-filter: blur(3px);
+    }
+    .booking-dropdown {
+      left: 50% !important;
+      top: 50% !important;
+      right: auto !important;
+      bottom: auto !important;
+      width: min(360px, calc(100vw - 32px)) !important;
+      transform: translate(-50%, -46%) scale(0.98) !important;
+    }
+    .booking-dropdown.open {
+      transform: translate(-50%, -50%) scale(1) !important;
+    }
+    @media (max-width: 480px) {
+      .booking-dropdown {
+        left: 50% !important;
+        top: 50% !important;
+        right: auto !important;
+        bottom: auto !important;
+        width: min(360px, calc(100vw - 24px)) !important;
+      }
+    }
+  
+    /* Compact service FAQ */
+    .service-faq {
+      display: grid;
+      gap: 8px;
+      margin: 10px 0 18px;
+    }
+    .service-faq details {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #fff;
+      padding: 0 12px;
+    }
+    .service-faq summary {
+      cursor: pointer;
+      padding: 11px 0;
+      color: #3c3029;
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 1.35;
+    }
+    .service-faq p {
+      margin: 0;
+      padding: 0 0 12px;
+      color: #5f524a;
+      font-size: 13px;
+      line-height: 1.5;
+    }
   </style>
   <script type="application/ld+json">
 {
     "@context":  "https://schema.org",
     "@type":  "Service",
     "@id":  "https://bestcolorufa.ru/services/color/index.html#service",
-    "name":  "Цветное окрашивание в Уфе — яркий и скрытый цвет",
-    "description":  "Цветное окрашивание в Уфе: яркие, пастельные и скрытые оттенки на подготовленной базе. Поможем выбрать цвет и сохранить качество волос.",
+    "name":  "Цветное и скрытое окрашивание в Уфе",
+    "description":  "Цветное и скрытое окрашивание в Уфе: яркие, пастельные и акцентные пряди на подготовленной базе. Диагностика, осветление по показаниям и уход.",
     "serviceType":  "Цветное окрашивание",
     "url":  "https://bestcolorufa.ru/services/color/index.html",
     "image":  "https://bestcolorufa.ru/assets/services/color/images/cover.png",
@@ -1113,7 +1172,7 @@
                            "name":  "Нужно ли осветлять волосы перед ярким цветом?",
                            "acceptedAnswer":  {
                                                   "@type":  "Answer",
-                                                  "text":  "Чаще всего да. Чем светлее база, тем чище и ярче получится оттенок."
+                                                  "text":  "Чаще всего да. Чем светлее и чище база, тем ярче и прозрачнее получится цвет. На темных волосах оттенок может быть приглушенным."
                                               }
                        },
                        {
@@ -1121,7 +1180,23 @@
                            "name":  "Скрытое окрашивание видно постоянно?",
                            "acceptedAnswer":  {
                                                   "@type":  "Answer",
-                                                  "text":  "Нет, яркий цвет обычно прячется под верхним слоем волос и заметен в движении, хвосте или укладке."
+                                                  "text":  "Нет, цвет обычно прячется под верхним слоем волос и проявляется в движении, хвосте, укладке или при проборе."
+                                              }
+                       },
+                       {
+                           "@type":  "Question",
+                           "name":  "Как долго держится яркий оттенок?",
+                           "acceptedAnswer":  {
+                                                  "@type":  "Answer",
+                                                  "text":  "Пастельные оттенки могут вымываться быстрее, насыщенные держатся дольше. В среднем обновление нужно через 3-6 недель."
+                                              }
+                       },
+                       {
+                           "@type":  "Question",
+                           "name":  "Можно ли сделать цветные пряди без полного окрашивания?",
+                           "acceptedAnswer":  {
+                                                  "@type":  "Answer",
+                                                  "text":  "Да, можно сделать акцентные пряди, скрытый блок, цвет на концах или отдельные зоны у лица."
                                               }
                        },
                        {
@@ -1129,10 +1204,36 @@
                            "name":  "Как сохранить яркий оттенок дольше?",
                            "acceptedAnswer":  {
                                                   "@type":  "Answer",
-                                                  "text":  "Нужен мягкий шампунь, прохладная вода, термозащита и периодическое обновление пигмента."
+                                                  "text":  "Помогают мягкий шампунь, прохладная вода, термозащита, редкое горячее укладывание и периодическое обновление пигмента."
                                               }
                        }
                    ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Главная",
+      "item": "https://bestcolorufa.ru/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Услуги",
+      "item": "https://bestcolorufa.ru/#works"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Цветное и скрытое окрашивание",
+      "item": "https://bestcolorufa.ru/services/color/index.html"
+    }
+  ]
 }
   </script>
 </head>
@@ -1140,7 +1241,7 @@
   <div class="booking-dropdown" id="bookingDropdown" aria-hidden="true">
     <a class="booking-primary" href="https://yandex.ru/business/widget/request/company/125972859834" target="_blank" rel="noopener noreferrer">
       <span class="booking-icon"><img src="../../assets/img/icons/yandex.png" alt=""></span>
-      <span>Записаться онлайн</span>
+      <span>Консультация по цветному окрашиванию</span>
     </a>
     <div class="booking-divider"></div>
     <div class="booking-caption">Или напишите нам</div>
@@ -1186,31 +1287,34 @@
           <a href="../../index.html" class="back-btn">На главную</a>
           <img src="../../assets/services/color/images/cover.png" alt="Цветное окрашивание в Уфе" style="width: 100%; border-radius: 12px; margin-bottom: 16px; object-fit: cover; aspect-ratio: 16/9;">
           <div class="eyebrow" style="text-align: left; margin:0 0 8px;">Креативный цвет</div>
-          <h1 style="margin: 0 0 16px; font-family: 'Cormorant Garamond', serif; font-size: 28px; color: #2d2019; line-height: 1.1;">Цветное окрашивание в Уфе: яркий и скрытый цвет</h1>
+          <h1 style="margin: 0 0 16px; font-family: 'Cormorant Garamond', serif; font-size: 28px; color: #2d2019; line-height: 1.1;">Цветное и скрытое окрашивание в Уфе</h1>
 
           <div class="service-content">
-            <p>Цветное окрашивание уфа подходит тем, кто хочет добавить яркость, акцент или полностью сменить настроение образа. Это может быть яркое окрашивание волос, пастельный оттенок, цветные пряди или скрытое окрашивание.</p>
-            <p>В салоне «Территория красоты» креативное окрашивание выполняется на подготовленной базе: мастер оценивает, нужно ли предварительное осветление, и подбирает оттенок под желаемую стойкость и стиль.</p>
+            <p>Цветное окрашивание может быть смелым или очень деликатным: яркие пряди у лица, пастельный оттенок, цветные концы или скрытый блок, который виден только в движении. Главное - заранее понять, насколько светлой должна быть база и как быстро выбранный цвет будет вымываться.</p>
+            <p>В «Территории красоты» в Уфе мастер оценивает текущий цвет, качество волос и вашу идею: нужен ли полный светлый фон, достаточно ли локального осветления, какой оттенок будет выглядеть чисто и как его поддерживать дома.</p>
 
             <h2>Кому подходит</h2>
             <ul>
-              <li>хочется яркий, пастельный или необычный оттенок</li>
-              <li>нужно скрытое окрашивание, которое видно только в движении</li>
-              <li>вы хотите цветные пряди без полного изменения образа</li>
-              <li>есть готовая идея, но нужен колорист уфа для безопасного выполнения</li>
-            </ul>
-
-            <h2>Что входит в услугу</h2>
-            <ul>
-              <li>консультация по оттенку и стойкости цвета</li>
-              <li>диагностика базы и при необходимости осветление</li>
-              <li>нанесение прямого пигмента или цветного состава</li>
-              <li>уход после окрашивания</li>
-              <li>рекомендации, как продлить яркость цвета</li>
+              <li>хочется яркий, пастельный или необычный оттенок без случайного результата</li>
+              <li>нужно скрытое окрашивание, которое видно только в движении, хвосте или укладке</li>
+              <li>вы хотите цветные пряди у лица, на концах или в отдельной зоне без полного изменения образа</li>
+              <li>есть референс, но нужно понять, получится ли такой цвет на вашей базе безопасно</li>
             </ul>
 
             <h2>Как проходит процедура</h2>
-            <p>Сначала мастер определяет, насколько волосы готовы к цвету. Для ярких оттенков часто нужна светлая база. Затем наносится пигмент, выдерживается нужное время, выполняется уход и укладка.</p>
+            <ol>
+              <li><strong>Разбор идеи.</strong> Мастер смотрит референс, выбирает зону окрашивания и объясняет, какая база нужна для выбранного оттенка.</li>
+              <li><strong>Подготовка базы.</strong> Если цвет требует чистого фона, выполняется локальное или более широкое осветление с учетом качества волос.</li>
+              <li><strong>Нанесение цвета.</strong> Пигмент или цветной состав наносится на подготовленные зоны, контролируется насыщенность и равномерность.</li>
+              <li><strong>Уход и план поддержки.</strong> После смывания выполняется уход, укладка и рекомендации, как дольше сохранить яркость.</li>
+            </ol>
+
+            <h2>Что вы получите в результате</h2>
+            <p>Акцентный цвет, который работает с вашим образом: заметный яркий оттенок, мягкая пастель, скрытый цвет под верхним слоем волос или отдельные пряди без полного окрашивания всей длины.</p>
+
+            <h2>Что важно знать до записи</h2>
+            <p>Яркий и пастельный цвет почти всегда требует светлой базы. На темных или ранее окрашенных волосах оттенок может быть менее чистым, а осветление иногда лучше делать поэтапно. Стойкость зависит от пористости, температуры воды, шампуня, горячих укладок и выбранного пигмента.</p>
+            <!-- TODO: уточнить линейки прямых пигментов/цветных красителей, которые используются в салоне. -->
 
             <h2>Сколько времени занимает</h2>
             <p>Время зависит от сложности идеи. Простые цветные пряди могут занять 2–3 часа, а осветление с последующим ярким окрашиванием — 4–6 часов.</p>
@@ -1222,15 +1326,31 @@
             <p>Стоимость зависит от зоны окрашивания, необходимости осветления, количества оттенков, длины волос и расхода пигмента.</p>
 
             <h2>FAQ</h2>
-            <h3>Нужно ли осветлять волосы перед ярким цветом?</h3>
-            <p>Чаще всего да. Чем светлее база, тем чище и ярче получится оттенок.</p>
-            <h3>Скрытое окрашивание видно постоянно?</h3>
-            <p>Нет, яркий цвет обычно прячется под верхним слоем волос и заметен в движении, хвосте или укладке.</p>
-            <h3>Как сохранить яркий оттенок дольше?</h3>
-            <p>Нужен мягкий шампунь, прохладная вода, термозащита и периодическое обновление пигмента.</p>
+            <div class="service-faq">
+              <details>
+                <summary>Нужно ли осветлять волосы перед ярким цветом?</summary>
+                <p>Чаще всего да. Чем светлее и чище база, тем ярче и прозрачнее получится цвет. На темных волосах оттенок может быть приглушенным.</p>
+              </details>
+              <details>
+                <summary>Скрытое окрашивание видно постоянно?</summary>
+                <p>Нет, цвет обычно прячется под верхним слоем волос и проявляется в движении, хвосте, укладке или при проборе.</p>
+              </details>
+              <details>
+                <summary>Как долго держится яркий оттенок?</summary>
+                <p>Пастельные оттенки могут вымываться быстрее, насыщенные держатся дольше. В среднем обновление нужно через 3-6 недель.</p>
+              </details>
+              <details>
+                <summary>Можно ли сделать цветные пряди без полного окрашивания?</summary>
+                <p>Да, можно сделать акцентные пряди, скрытый блок, цвет на концах или отдельные зоны у лица.</p>
+              </details>
+              <details>
+                <summary>Как сохранить яркий оттенок дольше?</summary>
+                <p>Помогают мягкий шампунь, прохладная вода, термозащита, редкое горячее укладывание и периодическое обновление пигмента.</p>
+              </details>
+            </div>
 
             <h2>Другие услуги</h2>
-            <p>Если вы сравниваете варианты окрашивания волос уфа, посмотрите соседние направления салона:</p>
+            <p>Если для цвета сначала нужно подготовить светлую базу, может понадобиться <a href="../total-blond/index.html">тотал блонд</a>, <a href="../melirovanie/index.html">мелирование</a> или локальное осветление. Для мягкого обновления оттенка после вымывания подойдет <a href="../tonirovanie/index.html">тонирование</a>, а после темного красителя иногда безопаснее начать с <a href="../exit-black/index.html">выхода из черного</a>. Выбрать подходящего специалиста поможет раздел <a href="../../about/masters/index.html">мастера окрашивания</a>.</p>
             <ul>
               <li><a href="../tonirovanie/index.html">Тонирование</a></li>
               <li><a href="../melirovanie/index.html">Мелирование</a></li>
@@ -1243,7 +1363,7 @@
           </div>          <div class="service-booking-card">
             <a class="booking-primary" href="https://yandex.ru/business/widget/request/company/125972859834" target="_blank" rel="noopener noreferrer">
               <span class="booking-icon"><img src="../../assets/img/icons/yandex.png" alt=""></span>
-              <span>Записаться онлайн</span>
+              <span>Записаться на цветное окрашивание</span>
             </a>
             <div class="booking-divider"></div>
             <div class="booking-caption">Или напишите нам</div>
@@ -1327,6 +1447,7 @@
       const setBookingState = (isOpen, toggle = activeToggle) => {
         dropdown.classList.toggle('open', isOpen);
         dropdown.setAttribute('aria-hidden', String(!isOpen));
+        document.body.classList.toggle('booking-open', isOpen);
         toggles.forEach(item => item.setAttribute('aria-expanded', String(isOpen && item === toggle)));
         activeToggle = isOpen ? toggle : null;
         if (isOpen && toggle) placeDropdown(toggle);
@@ -1367,3 +1488,5 @@
   </script>
 </body>
 </html>
+
+

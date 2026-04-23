@@ -1,19 +1,19 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Мелирование волос в Уфе — аккуратное осветление | Территория красоты</title>
-  <meta name="description" content="Мелирование волос в Уфе для мягкого осветления, рельефа и маскировки первой седины. Аккуратная техника и тонирование после процедуры." />
+  <title>Мелирование волос в Уфе: мягкие пряди и свежий рельеф | Территория красоты</title>
+  <meta name="description" content="Мелирование волос в Уфе для мягкого осветления, маскировки первой седины и живого рельефа. Диагностика, аккуратный набор прядей, тонирование и уход." />
   <link rel="canonical" href="https://bestcolorufa.ru/services/melirovanie/index.html" />
-  <meta property="og:title" content="Мелирование волос в Уфе — аккуратное осветление | Территория красоты" />
-  <meta property="og:description" content="Мелирование волос в Уфе для мягкого осветления, рельефа и маскировки первой седины. Аккуратная техника и тонирование после процедуры." />
+  <meta property="og:title" content="Мелирование волос в Уфе: мягкие пряди и свежий рельеф | Территория красоты" />
+  <meta property="og:description" content="Мягкое осветление, маскировка первой седины, тонирование и уход после процедуры." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://bestcolorufa.ru/services/melirovanie/index.html" />
   <meta property="og:image" content="https://bestcolorufa.ru/assets/services/melirovanie/images/cover.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Мелирование волос в Уфе — аккуратное осветление | Территория красоты" />
-  <meta name="twitter:description" content="Мелирование волос в Уфе для мягкого осветления, рельефа и маскировки первой седины. Аккуратная техника и тонирование после процедуры." />
+  <meta name="twitter:title" content="Мелирование волос в Уфе: мягкие пряди и свежий рельеф | Территория красоты" />
+  <meta name="twitter:description" content="Мягкое осветление, маскировка первой седины, тонирование и уход после процедуры." />
   <meta name="twitter:image" content="https://bestcolorufa.ru/assets/services/melirovanie/images/cover.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1049,14 +1049,73 @@
         font-size: 12px;
       }
     }
+  
+    /* Booking modal final behavior */
+    body.booking-open { overflow: hidden; }
+    body.booking-open::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: 90;
+      background: rgba(36, 28, 24, 0.42);
+      backdrop-filter: blur(3px);
+    }
+    .booking-dropdown {
+      left: 50% !important;
+      top: 50% !important;
+      right: auto !important;
+      bottom: auto !important;
+      width: min(360px, calc(100vw - 32px)) !important;
+      transform: translate(-50%, -46%) scale(0.98) !important;
+    }
+    .booking-dropdown.open {
+      transform: translate(-50%, -50%) scale(1) !important;
+    }
+    @media (max-width: 480px) {
+      .booking-dropdown {
+        left: 50% !important;
+        top: 50% !important;
+        right: auto !important;
+        bottom: auto !important;
+        width: min(360px, calc(100vw - 24px)) !important;
+      }
+    }
+  
+    /* Compact service FAQ */
+    .service-faq {
+      display: grid;
+      gap: 8px;
+      margin: 10px 0 18px;
+    }
+    .service-faq details {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #fff;
+      padding: 0 12px;
+    }
+    .service-faq summary {
+      cursor: pointer;
+      padding: 11px 0;
+      color: #3c3029;
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 1.35;
+    }
+    .service-faq p {
+      margin: 0;
+      padding: 0 0 12px;
+      color: #5f524a;
+      font-size: 13px;
+      line-height: 1.5;
+    }
   </style>
   <script type="application/ld+json">
 {
     "@context":  "https://schema.org",
     "@type":  "Service",
     "@id":  "https://bestcolorufa.ru/services/melirovanie/index.html#service",
-    "name":  "Мелирование волос в Уфе — аккуратное осветление",
-    "description":  "Мелирование волос в Уфе для мягкого осветления, рельефа и маскировки первой седины. Аккуратная техника и тонирование после процедуры.",
+    "name":  "Мелирование волос в Уфе: мягкие пряди и свежий рельеф",
+    "description":  "Мелирование волос в Уфе для мягкого осветления, маскировки первой седины и живого рельефа. Диагностика, аккуратный набор прядей, тонирование и уход.",
     "serviceType":  "Мелирование волос",
     "url":  "https://bestcolorufa.ru/services/melirovanie/index.html",
     "image":  "https://bestcolorufa.ru/assets/services/melirovanie/images/cover.png",
@@ -1121,7 +1180,7 @@
                            "name":  "Чем мелирование отличается от Airtouch?",
                            "acceptedAnswer":  {
                                                   "@type":  "Answer",
-                                                  "text":  "Мелирование дает более классический рисунок прядей, а Airtouch создает более мягкий растянутый переход."
+                                                  "text":  "Мелирование дает более читаемый классический рисунок прядей, а Airtouch создает более мягкий растянутый переход с выдуванием коротких волосков."
                                               }
                        },
                        {
@@ -1129,10 +1188,52 @@
                            "name":  "Нужно ли тонирование после мелирования?",
                            "acceptedAnswer":  {
                                                   "@type":  "Answer",
-                                                  "text":  "Да, чаще всего тонирование нужно, чтобы убрать лишнюю желтизну и получить красивый оттенок."
+                                                  "text":  "Да, чаще всего тонирование нужно, чтобы смягчить фон осветления, убрать лишнюю желтизну и собрать красивый оттенок."
+                                              }
+                       },
+                       {
+                           "@type":  "Question",
+                           "name":  "Как часто обновлять мелирование?",
+                           "acceptedAnswer":  {
+                                                  "@type":  "Answer",
+                                                  "text":  "Обычно раз в 2-4 месяца. Между коррекциями можно обновлять тонирование, если оттенок стал теплее или потерял блеск."
+                                              }
+                       },
+                       {
+                           "@type":  "Question",
+                           "name":  "Можно ли сделать мелирование на окрашенные волосы?",
+                           "acceptedAnswer":  {
+                                                  "@type":  "Answer",
+                                                  "text":  "Можно, но мастер сначала оценивает старый пигмент и качество длины. После темного окрашивания иногда нужна тест-прядь."
                                               }
                        }
                    ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Главная",
+      "item": "https://bestcolorufa.ru/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Услуги",
+      "item": "https://bestcolorufa.ru/#works"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Мелирование волос",
+      "item": "https://bestcolorufa.ru/services/melirovanie/index.html"
+    }
+  ]
 }
   </script>
 </head>
@@ -1140,7 +1241,7 @@
   <div class="booking-dropdown" id="bookingDropdown" aria-hidden="true">
     <a class="booking-primary" href="https://yandex.ru/business/widget/request/company/125972859834" target="_blank" rel="noopener noreferrer">
       <span class="booking-icon"><img src="../../assets/img/icons/yandex.png" alt=""></span>
-      <span>Записаться онлайн</span>
+      <span>Консультация по мелированию</span>
     </a>
     <div class="booking-divider"></div>
     <div class="booking-caption">Или напишите нам</div>
@@ -1189,28 +1290,30 @@
           <h1 style="margin: 0 0 16px; font-family: 'Cormorant Garamond', serif; font-size: 28px; color: #2d2019; line-height: 1.1;">Мелирование волос в Уфе: аккуратное осветление прядей</h1>
 
           <div class="service-content">
-            <p>Мелирование волос уфа подходит тем, кто хочет освежить образ, добавить светлые пряди и сохранить натуральную базу. Бережное мелирование помогает создать рельеф, визуальный объем и мягко замаскировать первую седину.</p>
-            <p>В «Территории красоты» мастер подбирает толщину прядей, частоту набора и оттенок тонирования под вашу внешность. Если вас интересует мелирование цена уфа, точный расчет зависит от длины, густоты и желаемой плотности рисунка.</p>
+            <p>Мелирование помогает стать светлее без полного осветления всего полотна. За счет прядей цвет выглядит живее, волосы визуально объемнее, а первая седина может мягко растворяться в общем рисунке.</p>
+            <p>В «Территории красоты» в Уфе мастер подбирает толщину прядей, частоту набора, отступ от корня и оттенок тонирования под вашу базу. Мы заранее объясняем, будет ли рисунок классическим, мягким или более контрастным, и как он будет отрастать.</p>
 
             <h2>Кому подходит</h2>
             <ul>
-              <li>нужно стать светлее без полного осветления</li>
-              <li>хочется добавить рельеф и эффект выгоревших прядей</li>
+              <li>нужно стать светлее без тотал блонда и частого обновления корней</li>
+              <li>хочется добавить рельеф, мягкие блики или эффект выгоревших прядей</li>
               <li>появилась первая седина, которую хочется скрыть мягко</li>
-              <li>вы хотите классический результат без резкой смены образа</li>
-            </ul>
-
-            <h2>Что входит в услугу</h2>
-            <ul>
-              <li>консультация и подбор схемы набора прядей</li>
-              <li>осветление прядей от корней или с мягким отступом</li>
-              <li>контроль фона осветления</li>
-              <li>тонирование для красивого оттенка</li>
-              <li>уход и рекомендации по поддержанию цвета</li>
+              <li>вы хотите классический результат без резкой смены образа и сильного контраста</li>
             </ul>
 
             <h2>Как проходит процедура</h2>
-            <p>Мастер делит волосы на зоны, набирает пряди и наносит осветляющий состав. После достижения нужного фона волосы тонируются, чтобы оттенок выглядел чистым и дорогим. В конце выполняется уход и укладка.</p>
+            <ol>
+              <li><strong>Диагностика и схема.</strong> Мастер оценивает базу, седину, старый краситель и выбирает частоту набора прядей.</li>
+              <li><strong>Набор и осветление.</strong> Волосы делятся на зоны, пряди набираются по схеме и осветляются под контролем фона.</li>
+              <li><strong>Тонирование.</strong> После осветления оттенок смягчается: убирается лишняя желтизна, добавляется бежевый, холодный или натуральный нюанс.</li>
+              <li><strong>Уход и финиш.</strong> Мастер выполняет уход, укладку и объясняет, как поддерживать оттенок между визитами.</li>
+            </ol>
+
+            <h2>Что вы получите в результате</h2>
+            <p>Более светлый, объемный и живой цвет без полного перехода в блонд. Пряди освежают лицо, добавляют глубину и помогают сделать отрастание мягче, особенно при первой седине.</p>
+
+            <h2>Что важно знать до записи</h2>
+            <p>На ранее окрашенных темных волосах мелирование может дать теплый фон, поэтому иногда нужна тест-прядь или более мягкий план. Если хочется максимально плавный переход и редкую коррекцию, стоит сравнить мелирование с <a href="../airtouch/index.html">Airtouch</a>.</p>
 
             <h2>Сколько времени занимает</h2>
             <p>Процедура обычно занимает 3–5 часов. Время зависит от густоты волос, частоты набора прядей и необходимости тонирования.</p>
@@ -1222,15 +1325,31 @@
             <p>Стоимость зависит от длины, густоты, количества прядей, расхода материала и сложности тонирования после осветления.</p>
 
             <h2>FAQ</h2>
-            <h3>Мелирование подходит для седины?</h3>
-            <p>Да, тонкие светлые пряди помогают мягко замаскировать первую седину и сделать отрастание менее заметным.</p>
-            <h3>Чем мелирование отличается от Airtouch?</h3>
-            <p>Мелирование дает более классический рисунок прядей, а Airtouch создает более мягкий растянутый переход.</p>
-            <h3>Нужно ли тонирование после мелирования?</h3>
-            <p>Да, чаще всего тонирование нужно, чтобы убрать лишнюю желтизну и получить красивый оттенок.</p>
+            <div class="service-faq">
+              <details>
+                <summary>Мелирование подходит для седины?</summary>
+                <p>Да, тонкие светлые пряди помогают мягко замаскировать первую седину и сделать отрастание менее заметным.</p>
+              </details>
+              <details>
+                <summary>Чем мелирование отличается от Airtouch?</summary>
+                <p>Мелирование дает более читаемый классический рисунок прядей, а Airtouch создает более мягкий растянутый переход с выдуванием коротких волосков.</p>
+              </details>
+              <details>
+                <summary>Нужно ли тонирование после мелирования?</summary>
+                <p>Да, чаще всего тонирование нужно, чтобы смягчить фон осветления, убрать лишнюю желтизну и собрать красивый оттенок.</p>
+              </details>
+              <details>
+                <summary>Как часто обновлять мелирование?</summary>
+                <p>Обычно раз в 2-4 месяца. Между коррекциями можно обновлять тонирование, если оттенок стал теплее или потерял блеск.</p>
+              </details>
+              <details>
+                <summary>Можно ли сделать мелирование на окрашенные волосы?</summary>
+                <p>Можно, но мастер сначала оценивает старый пигмент и качество длины. После темного окрашивания иногда нужна тест-прядь.</p>
+              </details>
+            </div>
 
             <h2>Другие услуги</h2>
-            <p>Если вы сравниваете варианты окрашивания волос уфа, посмотрите соседние направления салона:</p>
+            <p>Если нужен более плавный и долго носибельный переход, посмотрите <a href="../airtouch/index.html">Airtouch</a>. Для поддержки оттенка после мелирования подойдет <a href="../tonirovanie/index.html">тонирование</a>, а для более объемного рисунка - <a href="../relief/index.html">рельефное окрашивание</a>. Кто работает с такими задачами, описано на странице <a href="../../about/masters/index.html">мастеров-колористов</a>.</p>
             <ul>
               <li><a href="../tonirovanie/index.html">Тонирование</a></li>
               <li><a href="../total-blond/index.html">Тотал блонд</a></li>
@@ -1243,7 +1362,7 @@
           </div>          <div class="service-booking-card">
             <a class="booking-primary" href="https://yandex.ru/business/widget/request/company/125972859834" target="_blank" rel="noopener noreferrer">
               <span class="booking-icon"><img src="../../assets/img/icons/yandex.png" alt=""></span>
-              <span>Записаться онлайн</span>
+              <span>Записаться на мелирование</span>
             </a>
             <div class="booking-divider"></div>
             <div class="booking-caption">Или напишите нам</div>
@@ -1327,6 +1446,7 @@
       const setBookingState = (isOpen, toggle = activeToggle) => {
         dropdown.classList.toggle('open', isOpen);
         dropdown.setAttribute('aria-hidden', String(!isOpen));
+        document.body.classList.toggle('booking-open', isOpen);
         toggles.forEach(item => item.setAttribute('aria-expanded', String(isOpen && item === toggle)));
         activeToggle = isOpen ? toggle : null;
         if (isOpen && toggle) placeDropdown(toggle);
@@ -1367,3 +1487,5 @@
   </script>
 </body>
 </html>
+
+
